@@ -8,8 +8,8 @@ public class SimulationManager : MonoBehaviour
     public float directionFloat;
     private GameObject currObject;
     private GameObject nextObject;
-    private bool failed = false;
-    private bool completed = false;
+    public bool failed = false;
+    public bool completed = false;
     public bool isMoving = false;
 
 
@@ -102,9 +102,9 @@ public class SimulationManager : MonoBehaviour
                 }
             }
         }
-        else
+        else if(nextObject == null)
         {
-            Debug.Log("Scenario fail 3");
+            Debug.Log("Scenario fail 3-1");
             failed = true;
         }
     }

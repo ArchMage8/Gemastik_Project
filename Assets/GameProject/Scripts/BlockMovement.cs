@@ -72,7 +72,7 @@ public class BlockMovement : MonoBehaviour
     void MoveBlock()
     {
         float step = moveSpeed * Time.deltaTime;
-        blockToMove.transform.position = Vector3.Lerp(blockToMove.transform.position, targetPosition, step);
+        blockToMove.transform.position = Vector3.MoveTowards(blockToMove.transform.position, targetPosition, step);
 
         if (Vector3.Distance(blockToMove.transform.position, targetPosition) < 0.001f)
         {
@@ -162,13 +162,6 @@ public class BlockMovement : MonoBehaviour
                 inRay = false;
             }
         }
-    }
-
-    private float NormalizeAngle(float angle)
-    {
-        while (angle > 180) angle -= 360;
-        while (angle < -180) angle += 360;
-        return angle;
     }
 }
 
