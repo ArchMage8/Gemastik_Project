@@ -13,17 +13,22 @@ public class LevelSelectSystem : MonoBehaviour
     public LevelSelectManager manager;
 
     private float moveSpeed = 3f;
+    private bool isMoving = false;
+    private bool canPress = true;
 
     private void Start()
     {
+  
         targetPos = transform.position;
         targetImage.SetActive(false);
     }
 
     public void ToggleImage()
     {
-        if (!manager.isPreviewing)
+        
+        if (!manager.isPreviewing && canPress)
         {
+            canPress = false;
             manager.isPreviewing = true;
            
             StartCoroutine(enableHandler());
@@ -33,9 +38,11 @@ public class LevelSelectSystem : MonoBehaviour
 
     public void CloseImage()
     {
-        if(manager.isPreviewing)
+        
+        if(manager.isPreviewing && canPress)
         {
-           StartCoroutine(disableHandler());
+            canPress = false;
+            StartCoroutine(disableHandler());
         }
     }
 
@@ -48,9 +55,13 @@ public class LevelSelectSystem : MonoBehaviour
     {
         ChangeZoom(manager.targetZoom);
         Vector3 tempPos = new Vector3(targetPos.x + manager.XOffset, targetPos.y, targetPos.z);
-        MoveCamera(tempPos);
+
         
-        yield return new WaitForSeconds(1.5f);
+            MoveCamera(tempPos);
+     
+
+        yield return new WaitForSeconds(1.8f);
+        canPress = true;
         targetImage.SetActive(true);
 
     }
@@ -60,19 +71,26 @@ public class LevelSelectSystem : MonoBehaviour
         ChangeZoom(manager.initialZoom);
         
         mainCamera.orthographicSize = manager.initialZoom;
+        
+        yield return new WaitForSeconds(0f);
+        targetImage.GetComponent<Image>().enabled = false;
+        this.gameObject.GetComponent<Image>().enabled = false;
+        
         MoveCamera(manager.camInitial);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(5f);
+        targetImage.GetComponent<Image>().enabled = true;
+        this.gameObject.GetComponent<Image>().enabled = true;
+
         targetImage.SetActive(false);
-       
-       
+        canPress = true;
         manager.isPreviewing = false;
     }
 
 
     public void MoveCamera(Vector3 targetPosition)
     {
-        float destination = targetPosition.x;
-        StartCoroutine(MoveCameraCoroutine(destination, moveSpeed));
+            float destination = targetPosition.x;
+            StartCoroutine(MoveCameraCoroutine(destination, moveSpeed));
     }
 
     private IEnumerator MoveCameraCoroutine(float targetX, float speed)
@@ -80,13 +98,15 @@ public class LevelSelectSystem : MonoBehaviour
         Vector3 currentPos = mainCamera.transform.position;
         Vector3 targetPosition = new Vector3(targetX, currentPos.y, currentPos.z);
 
+        isMoving = true;
         while (Mathf.Abs(mainCamera.transform.position.x - targetX) > 0.01f)
         {
             float newX = Mathf.Lerp(mainCamera.transform.position.x, targetX, speed * Time.unscaledDeltaTime);
-            mainCamera.transform.position = new Vector3(newX, currentPos.y, currentPos.z);
+            mainCamera.transform.position = new Vector3(newX, mainCamera.transform.position.y, mainCamera.transform.position.z);
             yield return null;
         }
-        mainCamera.transform.position = targetPosition; // Ensure the camera reaches the exact position
+        mainCamera.transform.position = new Vector3(targetX, mainCamera.transform.position.y, mainCamera.transform.position.z);
+        isMoving = false;
     }
 
     private void ChangeZoom(float targetSize)

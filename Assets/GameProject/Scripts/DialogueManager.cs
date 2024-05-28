@@ -3,77 +3,123 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Image[] dialogueImages;
-    public float spamDelay = 1f;
-    public bool sceneTrigger = false;
-    public int targetScene;
-
-    private int currentImageIndex = 0;
-    private bool canClick = true;
-
-    private void Awake()
+   public enum Speaker
     {
-        foreach (Image img in dialogueImages)
-        {
-            img.gameObject.SetActive(false);
-        }
+        OldMan,
+        Dog
+    }
 
-        if (dialogueImages.Length > 0)
-        {
-            dialogueImages[0].gameObject.SetActive(true);
-        }
+    public Speaker[] speaker;
+    [Space(15)]
+    public TMP_Text[] dialogues;
+    [Space(15)]
+    public Image[] speakerPictures;
+    [Space(15)]
+
+    [Space(15)]
+    [Header("Dialogue Boxes")]
+    public GameObject TopBox;
+    public GameObject BottomBox;
+
+
+    private GameObject topBoxShader;
+    private GameObject bottomBoxShader;
+
+    private int indexValue = 0;
+    private float delayTime = 0f;
+    private bool canAdvance = true;
+
+    public void Start()
+    {
+        topBoxShader = TopBox.transform.GetChild(0).gameObject;
+        bottomBoxShader = BottomBox.transform.GetChild(0).gameObject;
 
         Time.timeScale = 0f;
+
+        foreach (var dialogue in dialogues)
+        {
+            dialogue.gameObject.SetActive(false);
+        }
+
+        foreach (var speakerPicture in speakerPictures)
+        {
+            speakerPicture.gameObject.SetActive(false);
+        }
+
+        EnableObjectsAtIndex(indexValue);
+
     }
 
-    private void Update()
+    public void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canClick)
+        if (Input.GetMouseButtonDown(0) && canAdvance)
         {
-            StartCoroutine(HandleClick());
-
+            indexValue++;
+            StartCoroutine(AdvanceDialogueWithDelay(delayTime));
         }
     }
 
-    private IEnumerator HandleClick()
+    void EnableObjectsAtIndex(int index)
     {
-        canClick = false;
-        
-        if(currentImageIndex == 0)
+        if (index < dialogues.Length && index < speakerPictures.Length)
         {
-            yield return new WaitForSecondsRealtime(spamDelay);
-        }
+            dialogues[index].gameObject.SetActive(true);
+            speakerPictures[index].gameObject.SetActive(true);
 
-        if (currentImageIndex < dialogueImages.Length)
-        {
-            dialogueImages[currentImageIndex].gameObject.SetActive(false);
-        }
-
-        currentImageIndex++;
-
-        if (currentImageIndex < dialogueImages.Length)
-        {
-            dialogueImages[currentImageIndex].gameObject.SetActive(true);
+            if (speaker[index] == Speaker.OldMan)
+            {
+                bottomBoxShader.SetActive(true);
+                topBoxShader.SetActive(false);
+            }
+            else if (speaker[index] == Speaker.Dog)
+            {
+                bottomBoxShader.SetActive(false);
+                topBoxShader.SetActive(true);
+            }
+            else
+            {
+                bottomBoxShader.SetActive(false);
+                topBoxShader.SetActive(false);
+            }
         }
         else
         {
-            Time.timeScale = 1f;
+            EndDialogue();
+        }
+    }
 
-            foreach (Image img in dialogueImages)
-            {
-                img.gameObject.SetActive(false);
-            }
+    private void DisableHandler()
+    {
+        //Check for the next object's enum
+        //Disable the previous game object in the array with the same enum
+    }
 
-            if (sceneTrigger)
-            {
-                SceneManager.LoadScene(targetScene);
-            }
+    IEnumerator AdvanceDialogueWithDelay(float delay)
+    {
+
+        canAdvance = false;
+        yield return new WaitForSeconds(delay);
+        EnableObjectsAtIndex(indexValue);
+        canAdvance = true;
+    }
+
+    void EndDialogue()
+    {
+        Time.timeScale = 1.0f;
+        foreach (var dialogue in dialogues)
+        {
+            dialogue.gameObject.SetActive(false);
         }
 
-        yield return new WaitForSecondsRealtime(spamDelay);
-        canClick = true;
+        foreach (var speakerPicture in speakerPictures)
+        {
+            speakerPicture.gameObject.SetActive(false);
+        }
+        TopBox.SetActive(false);
+        BottomBox.SetActive(false);
     }
 }
