@@ -1,125 +1,130 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-   public enum Speaker
+    public enum Speaker
     {
-        OldMan,
-        Dog
+        Dog,
+        OldMan
     }
 
-    public Speaker[] speaker;
-    [Space(15)]
-    public TMP_Text[] dialogues;
-    [Space(15)]
-    public Image[] speakerPictures;
-    [Space(15)]
+    [System.Serializable]
+    public class CharacterPicture
+    {
+        public Image Picture;
+        public Speaker Type;
+    }
 
-    [Space(15)]
-    [Header("Dialogue Boxes")]
-    public GameObject TopBox;
-    public GameObject BottomBox;
+    public CharacterPicture[] CharacterPictures;
 
+    public TMP_Text[] Dialogues;
 
-    private GameObject topBoxShader;
-    private GameObject bottomBoxShader;
+    public Speaker[] Speakers;
+
+    public Image DogBox;
+    public Image ManBox;
 
     private int indexValue = 0;
-    private float delayTime = 0f;
-    private bool canAdvance = true;
 
-    public void Start()
+    void Start()
     {
-        topBoxShader = TopBox.transform.GetChild(0).gameObject;
-        bottomBoxShader = BottomBox.transform.GetChild(0).gameObject;
-
         Time.timeScale = 0f;
+        
+        foreach (CharacterPicture characterPicture in CharacterPictures)
+        {
+            characterPicture.Picture.gameObject.SetActive(false);
+        }
 
-        foreach (var dialogue in dialogues)
+        foreach (TMP_Text dialogue in Dialogues)
         {
             dialogue.gameObject.SetActive(false);
         }
 
-        foreach (var speakerPicture in speakerPictures)
-        {
-            speakerPicture.gameObject.SetActive(false);
-        }
+        if (Dialogues.Length > 0)
+            Dialogues[0].gameObject.SetActive(true);
 
-        EnableObjectsAtIndex(indexValue);
-
+        UpdateCharacterPictures();
     }
 
-    public void Update()
+    void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canAdvance)
+        if (Input.GetMouseButtonDown(0))
         {
             indexValue++;
-            StartCoroutine(AdvanceDialogueWithDelay(delayTime));
-        }
-    }
 
-    void EnableObjectsAtIndex(int index)
-    {
-        if (index < dialogues.Length && index < speakerPictures.Length)
-        {
-            dialogues[index].gameObject.SetActive(true);
-            speakerPictures[index].gameObject.SetActive(true);
+            if (indexValue < Dialogues.Length)
+            {
+                Dialogues[indexValue - 1].gameObject.SetActive(false);
+                Dialogues[indexValue].gameObject.SetActive(true);
 
-            if (speaker[index] == Speaker.OldMan)
-            {
-                bottomBoxShader.SetActive(true);
-                topBoxShader.SetActive(false);
-            }
-            else if (speaker[index] == Speaker.Dog)
-            {
-                bottomBoxShader.SetActive(false);
-                topBoxShader.SetActive(true);
+                UpdateCharacterPictures();
             }
             else
             {
-                bottomBoxShader.SetActive(false);
-                topBoxShader.SetActive(false);
+                foreach (CharacterPicture characterPicture in CharacterPictures)
+                {
+                    characterPicture.Picture.gameObject.SetActive(false);
+                }
+
+                foreach (TMP_Text dialogue in Dialogues)
+                {
+                    dialogue.gameObject.SetActive(false);
+                }
+
+                DogBox.enabled = false;
+                ManBox.enabled = false;
+
+                Time.timeScale = 1f;
+            }
+        }
+    }
+
+    void UpdateCharacterPictures()
+    {
+        if (indexValue < CharacterPictures.Length)
+        {
+            CharacterPicture currentCharacterPicture = CharacterPictures[indexValue];
+
+            foreach (CharacterPicture characterPicture in CharacterPictures)
+            {
+                characterPicture.Picture.gameObject.SetActive(true);
+
+                if (characterPicture.Type != currentCharacterPicture.Type)
+                {
+                    SetSpriteColor(characterPicture.Picture, new Color(75f / 255f, 75f / 255f, 75f / 255f));
+                }
+                else
+                {
+                    ResetSpriteColor(characterPicture.Picture);
+                }
+            }
+
+            if (currentCharacterPicture.Type == Speaker.Dog)
+            {
+                DogBox.gameObject.SetActive(true);
+                ManBox.gameObject.SetActive(false);
+            }
+            else if (currentCharacterPicture.Type == Speaker.OldMan)
+            {
+                ManBox.gameObject.SetActive(true);
+                DogBox.gameObject.SetActive(false);
             }
         }
         else
         {
-            EndDialogue();
+            Debug.Log("End of character pictures reached.");
         }
     }
 
-    private void DisableHandler()
+    void SetSpriteColor(Image image, Color color)
     {
-        //Check for the next object's enum
-        //Disable the previous game object in the array with the same enum
+        image.color = color;
     }
 
-    IEnumerator AdvanceDialogueWithDelay(float delay)
+    void ResetSpriteColor(Image image)
     {
-
-        canAdvance = false;
-        yield return new WaitForSeconds(delay);
-        EnableObjectsAtIndex(indexValue);
-        canAdvance = true;
-    }
-
-    void EndDialogue()
-    {
-        Time.timeScale = 1.0f;
-        foreach (var dialogue in dialogues)
-        {
-            dialogue.gameObject.SetActive(false);
-        }
-
-        foreach (var speakerPicture in speakerPictures)
-        {
-            speakerPicture.gameObject.SetActive(false);
-        }
-        TopBox.SetActive(false);
-        BottomBox.SetActive(false);
+        image.color = Color.white;
     }
 }
