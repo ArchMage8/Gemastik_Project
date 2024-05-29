@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveVelocity;
     public float currAngle;
 
-  
+    public bool isMoving = false;
 
     private void Start()
     {
@@ -25,11 +25,15 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput != Vector2.zero)
         {
+            isMoving = true;
             float angle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
             currAngle = angle;
         }
 
-        
+        else
+        {
+            isMoving= false;
+        }
     }
 
     private void FixedUpdate()
