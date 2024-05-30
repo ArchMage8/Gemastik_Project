@@ -26,14 +26,20 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput != Vector2.zero)
         {
-            isMoving = true;
+           
             float angle = Mathf.Atan2(moveInput.y, moveInput.x) * Mathf.Rad2Deg;
             currAngle = angle;
         }
 
+
+        if(moveVelocity != Vector2.zero)
+        {
+            isMoving = true;
+        }
+
         else
         {
-            isMoving= false;
+            isMoving = false;
         }
     }
 

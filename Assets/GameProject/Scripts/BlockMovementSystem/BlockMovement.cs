@@ -1,11 +1,12 @@
 using System.Collections;
+using UnityEditor.Media;
 using UnityEngine;
 
 public class BlockMovement : MonoBehaviour
 {
     public GameObject blockToMove;
     
-    private float directionFloat;
+    public float directionFloat;
     private DetectionManager detectionManager;
     private PlayerDetectManager playerDetectManager ;
 
@@ -32,11 +33,12 @@ public class BlockMovement : MonoBehaviour
         {
           
             GetDirection();
+            ForceDirection();
             MoveCheck();
 
             if (!isMoving && blockToMove != null && canMove && inRay)
             {
-
+                
                 SetTargetPosition();
                 isMoving = true;
             }
@@ -44,6 +46,7 @@ public class BlockMovement : MonoBehaviour
 
         if (isMoving)
         {
+           
             StartCoroutine(AnimationHandler());
             MoveBlock();
         }
@@ -175,6 +178,7 @@ public class BlockMovement : MonoBehaviour
         {
            
             playerObject.transform.SetParent(transform);
+            playerObject.GetComponent<PlayerController>().isMoving = false;
             playerObject.GetComponent<PlayerController>().enabled = false;
             playerAnimations.isPushing = true;
 
@@ -182,8 +186,39 @@ public class BlockMovement : MonoBehaviour
             yield return null;
         }
        playerObject.transform.SetParent(null);
+     
        playerObject.GetComponent<PlayerController>().enabled = true;
        playerAnimations.isPushing = false;
+    }
+
+    private void ForceDirection()
+    {
+        GameObject player = playerDetectManager.playerObject.gameObject;
+        PlayerAnimation temp = player.GetComponentInChildren<PlayerAnimation>();
+
+        if (playerDetectManager.NortheastDetected) //NorthEast
+        {
+            Debug.Log("Test1");
+            temp.Direction = 8;
+        }
+
+        else if (playerDetectManager.NorthwestDetected) //NorthWest
+        {
+            Debug.Log("Test2");
+            temp.Direction = 7;
+        }
+
+        else if (playerDetectManager.SoutheastDetected) //SouthEast
+        {
+            Debug.Log("Test3");
+            temp.Direction = 6;
+        }
+
+        else if (playerDetectManager.SouthwestDetected) //SouthWest
+        {
+            Debug.Log("Test4");
+            temp.Direction = 5;
+        }
     }
 }
 
