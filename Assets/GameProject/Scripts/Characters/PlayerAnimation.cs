@@ -6,6 +6,8 @@ public class PlayerAnimation : MonoBehaviour
 {
     public PlayerController controller;
     private int Direction;
+    private bool isMoving;
+    public bool isPushing;
     private Animator animator;
 
 
@@ -17,44 +19,46 @@ public class PlayerAnimation : MonoBehaviour
     private void Update()
     {
         Direction = controller.DirectionalInt;
+        isMoving = controller.isMoving;
 
         if(Direction == 1)
         {
-
+            
         }
 
-        else if(Direction == 2) {
-
+        else if(Direction == 2) 
+        {
+           
         }
 
         else if (Direction == 3)
         {
-
+            
         }
 
         else if (Direction == 4)
         {
-
+            
         }
 
         else if (Direction == 5)
         {
-
+            
         }
 
         else if (Direction == 6)
         {
-
+           
         }
 
         else if (Direction == 7)
         {
-
+           
         }
 
         else if (Direction == 8)
         {
-
+           
         }
     }
 }

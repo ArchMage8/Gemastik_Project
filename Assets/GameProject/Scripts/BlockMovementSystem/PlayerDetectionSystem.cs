@@ -17,6 +17,8 @@ public class PlayerDetectionSystem : MonoBehaviour
     public float rayLength = 5f;
     public GameObject parentObject;
 
+    [HideInInspector] public GameObject PlayerObject;
+
     public bool detect = false;
 
     void Update()
@@ -36,6 +38,7 @@ public class PlayerDetectionSystem : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Player") && hit.collider.gameObject != parentObject)
             {
+                PlayerObject = hit.collider.gameObject;
                 detect = true;
                 break;
             }

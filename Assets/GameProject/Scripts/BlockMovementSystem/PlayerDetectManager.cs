@@ -16,11 +16,38 @@ public class PlayerDetectManager : MonoBehaviour
     public bool SouthwestDetected;
     public bool NorthwestDetected;
 
+    [HideInInspector] public GameObject playerObject;
+
     void Update()
     {
+        GetPlayer();
+
         NortheastDetected = Northeast.GetComponent<PlayerDetectionSystem>().detect;
         SoutheastDetected = Southeast.GetComponent<PlayerDetectionSystem>().detect;
         SouthwestDetected = Southwest.GetComponent<PlayerDetectionSystem>().detect;
         NorthwestDetected = Northwest.GetComponent<PlayerDetectionSystem>().detect;
+    }
+
+    private void GetPlayer()
+    {
+        if (NortheastDetected)
+        {
+            playerObject = Northeast.GetComponent<PlayerDetectionSystem>().PlayerObject;
+        }
+
+        else if (NorthwestDetected)
+        {
+            playerObject = Northwest.GetComponent<PlayerDetectionSystem>().PlayerObject;
+        }
+
+        else if (SoutheastDetected)
+        {
+            playerObject = Southeast.GetComponent<PlayerDetectionSystem>().PlayerObject;
+        }
+
+        else if (SouthwestDetected)
+        {
+            playerObject = Southwest.GetComponent<PlayerDetectionSystem>().PlayerObject;
+        }
     }
 }

@@ -157,7 +157,7 @@ MonoBehaviour:
   XOffset: 3
   camInitial: {x: 0, y: 0, z: 0}
   targetZoom: 3
-  Zoomrate: 0.7
+  Zoomrate: 1
   initialZoom: 0
 --- !u!4 &147110375
 Transform:

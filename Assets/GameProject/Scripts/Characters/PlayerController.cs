@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]public float currAngle;
 
     public bool isMoving = false;
-    [HideInInspector] public int DirectionalInt;
+    public int DirectionalInt;
 
     private void Start()
     {

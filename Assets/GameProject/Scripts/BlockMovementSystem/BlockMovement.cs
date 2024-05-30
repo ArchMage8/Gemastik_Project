@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BlockMovement : MonoBehaviour
@@ -11,7 +12,7 @@ public class BlockMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     private Vector3 targetPosition;
-    private bool isMoving = false;
+    public bool isMoving = false;
     private bool canMove = false;
     public bool playerCollide = false;
     public bool inRay = false;
@@ -32,6 +33,7 @@ public class BlockMovement : MonoBehaviour
           
             GetDirection();
             MoveCheck();
+
             if (!isMoving && blockToMove != null && canMove && inRay)
             {
 
@@ -42,7 +44,7 @@ public class BlockMovement : MonoBehaviour
 
         if (isMoving)
         {
-            
+            StartCoroutine(AnimationHandler());
             MoveBlock();
         }
     }
@@ -162,6 +164,26 @@ public class BlockMovement : MonoBehaviour
                 inRay = false;
             }
         }
+    }
+
+    private IEnumerator AnimationHandler()
+    {
+        GameObject playerObject = playerDetectManager.playerObject;
+        PlayerAnimation playerAnimations = playerObject.GetComponentInChildren<PlayerAnimation>();
+
+        while (isMoving)
+        {
+           
+            playerObject.transform.SetParent(transform);
+            playerObject.GetComponent<PlayerController>().enabled = false;
+            playerAnimations.isPushing = true;
+
+
+            yield return null;
+        }
+       playerObject.transform.SetParent(null);
+       playerObject.GetComponent<PlayerController>().enabled = true;
+       playerAnimations.isPushing = false;
     }
 }
 

@@ -1319,6 +1319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   currAngle: 0
+  isMoving: 0
+  DirectionalInt: 0
 --- !u!4 &574784093
 Transform:
   m_ObjectHideFlags: 0
@@ -4400,7 +4402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185623984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.51, y: 2.85, z: 0}
+  m_LocalPosition: {x: -0.55, y: 0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
