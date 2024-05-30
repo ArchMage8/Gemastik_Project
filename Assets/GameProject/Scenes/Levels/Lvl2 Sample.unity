@@ -7456,8 +7456,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8637215616124003316, guid: 985cf1fefeddf634eb95329ed22635e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 985cf1fefeddf634eb95329ed22635e5, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1185623984
 GameObject:
   m_ObjectHideFlags: 0
@@ -7564,7 +7562,6 @@ MonoBehaviour:
   currDetector: {fileID: 319466055}
   nextDetector: {fileID: 174595015}
   movementSpeed: 1
->>>>>>> Stashed changes
 --- !u!1 &1195349100
 GameObject:
   m_ObjectHideFlags: 0
