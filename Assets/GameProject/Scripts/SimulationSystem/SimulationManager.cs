@@ -5,19 +5,36 @@ using UnityEngine;
 
 public class SimulationManager : MonoBehaviour
 {
+    [Header("System :")]
     public float directionFloat;
     private GameObject currObject;
     private GameObject nextObject;
     public bool failed = false;
     public bool completed = false;
     public bool isMoving = false;
+    public bool isSimulating = false;
+    public float movementSpeed = 0.5f;
+
+    [Space (10)]
+    [Header ("Win/Lose :")] 
+    public GameObject fail_indicator;
+    public GameObject Win_Canvas;
 
     [HideInInspector] public bool animationGo = false;
-    public bool isSimulating = false;
+    
 
+    [Space(10)]
+    [Header("Detectors :")]
     public CurrDetector currDetector;
     public NextDetector nextDetector;
-    public float movementSpeed = 5f;
+    
+
+    public void Start()
+    {
+        
+        fail_indicator.SetActive(false);
+        Win_Canvas.SetActive(false);
+    }
 
     public void Update()
     {
@@ -31,6 +48,16 @@ public class SimulationManager : MonoBehaviour
         {
             nextObject = nextDetector.targetObject;
             currObject = currDetector.targetObject;
+        }
+
+        if (failed == true && completed == false)
+        {
+            fail_indicator.SetActive(true);
+        }
+
+        if(completed == true && failed == false)
+        {
+            Win_Canvas.SetActive(true);
         }
 
         //Debug.Log("next object : " + nextObject.name);
