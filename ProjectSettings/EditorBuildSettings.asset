@@ -5,7 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/GameProject/Scenes/Prototype/Game Menu.unity
+    guid: 1e6830aa43d41b948a67505d0fc073ff
+  - enabled: 1
+    path: Assets/GameProject/Scenes/Prototype/Level Select.unity
+    guid: ede2c6df4e9714a40a178803f107398e
+  - enabled: 1
+    path: Assets/GameProject/Scenes/Prototype/Lvl1 Sample.unity
+    guid: 3441925890812944eb02cfc0aea9fb9a
+  - enabled: 1
+    path: Assets/GameProject/Scenes/Prototype/Lvl2 Sample.unity
+    guid: a850e15e117dab04f95e5efbf57092d7
+  - enabled: 1
+    path: Assets/GameProject/Scenes/Prototype/Lvl3 Sample.unity
+    guid: 08b9ee2512b9d7f4aab0e2387c3dab75
   m_configObjects: {}
