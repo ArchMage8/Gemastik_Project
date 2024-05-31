@@ -53,7 +53,7 @@ public class BlindPersonAnimation : MonoBehaviour
         {
             yield return new WaitForSeconds(rotateDelay);
             animator.SetFloat("Vertical", -1);
-            animator.SetFloat("Horizontal", 1);
+            animator.SetFloat("Horizontal", -1);
         }
     }
 }
