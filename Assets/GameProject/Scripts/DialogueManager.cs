@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Boxes:")]
     public Image DogBox;
     public Image ManBox;
+    public GameObject ScreenFilter;
 
     [Space(20)]
     [Header("TimeDelay:")]
@@ -118,6 +119,7 @@ public class DialogueManager : MonoBehaviour
 
         DogBox.enabled = false;
         ManBox.enabled = false;
+        ScreenFilter.SetActive(false);
     }
 
     void UpdateCharacterPictures()
