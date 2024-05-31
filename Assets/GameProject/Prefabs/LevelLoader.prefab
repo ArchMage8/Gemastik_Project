@@ -61,7 +61,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!114 &457877474121544296
 MonoBehaviour:
@@ -135,7 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b084f71b96e144ebdab1b72c7c82bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   destinationScene: 1
+  Reload: 0
 --- !u!1 &457877474167784492
 GameObject:
   m_ObjectHideFlags: 0

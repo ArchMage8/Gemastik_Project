@@ -8,11 +8,21 @@ public class LevelSelectButtons : MonoBehaviour
 
     private void Start()
     {
-        LevelPreview.SetActive(false);
+        //LevelPreview.SetActive(false);
     }
 
     public void TurnOnLevelPreview()
     {
         LevelPreview.SetActive(true);
+    }
+
+     public void TurnOffLevelPreview()
+    {
+        LevelPreview.SetActive(false);
+    }
+
+    public void QuitTheGame()
+    {
+	Application.Quit();
     }
 }
