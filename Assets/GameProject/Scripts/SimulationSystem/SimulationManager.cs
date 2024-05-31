@@ -12,7 +12,7 @@ public class SimulationManager : MonoBehaviour
     public bool completed = false;
     public bool isMoving = false;
 
-
+    [HideInInspector] public bool animationGo = false;
     public bool isSimulating = false;
 
     public CurrDetector currDetector;
@@ -43,10 +43,11 @@ public class SimulationManager : MonoBehaviour
         {
             yield return new WaitForSeconds(3f);
             ObjectCheck();
-            
+
+            animationGo = true;
         }
         
-        
+        animationGo = false;
     }
 
     void ObjectCheck()
