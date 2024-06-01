@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         if (CharacterPictures.Length > 0)
             CharacterPictures[0].Picture.gameObject.SetActive(true);
 
-        Time.timeScale = 0f;
+        StartCoroutine(stopTime());
 
         yield return new WaitForSecondsRealtime(delay); // Use WaitForSecondsRealtime for unscaled delay
         canProgress = true; // Re-enable progression after delay
@@ -166,5 +166,11 @@ public class DialogueManager : MonoBehaviour
             ManBox.gameObject.SetActive(true);
             DogBox.gameObject.SetActive(false);
         }
+    }
+
+    private IEnumerator stopTime()
+    {
+        yield return new WaitForSeconds(1f);
+        Time.timeScale = 0f;
     }
 }
