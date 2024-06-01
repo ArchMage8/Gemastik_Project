@@ -11,7 +11,7 @@ public class InGameButtons : MonoBehaviour
     [SerializeField] private int HomeSceneIndex;
     [SerializeField] private Sprite ActivatedSprite;
 
-    public void Restart()
+    public void RestartThisScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -24,7 +24,7 @@ public class InGameButtons : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = ActivatedSprite;
     }
 
-    public void Home()
+    public void GoToHomeScreen()
     {
         SceneManager.LoadScene(HomeSceneIndex);
     }
