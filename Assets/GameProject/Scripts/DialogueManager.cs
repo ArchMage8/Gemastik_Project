@@ -32,8 +32,11 @@ public class DialogueManager : MonoBehaviour
     public GameObject ScreenFilter;
 
     [Space(20)]
-    [Header("TimeDelay:")]
+    [Header("Extras:")]
     public float delay = 2f; // Time delay before allowing the next dialogue index
+    public PlayerController playerController;
+    public GameObject NavButtons;
+
 
     private int indexValue = 0;
     private bool canProgress = false; // Flag to control the ability to move to the next dialogue index
@@ -42,6 +45,7 @@ public class DialogueManager : MonoBehaviour
     {
         StartCoroutine(InitializeDialogues());
         UpdateCharacterPictures();
+        NavButtons.SetActive(false);
     }
 
     void Update()
@@ -64,7 +68,6 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("End of dialogues reached.");
             EndDialogues();
         }
 
@@ -106,6 +109,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogues()
     {
         Time.timeScale = 1f;
+        playerController.enabled = true;
 
         foreach (CharacterPicture characterPicture in CharacterPictures)
         {
@@ -120,6 +124,7 @@ public class DialogueManager : MonoBehaviour
         DogBox.enabled = false;
         ManBox.enabled = false;
         ScreenFilter.SetActive(false);
+        NavButtons.SetActive(false);
     }
 
     void UpdateCharacterPictures()
@@ -170,6 +175,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator stopTime()
     {
+        playerController.enabled = false;
         yield return new WaitForSeconds(1f);
         Time.timeScale = 0f;
     }

@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 3757152421556811653}
   - component: {fileID: 9145850318708507834}
   - component: {fileID: 7134486469642863134}
-  - component: {fileID: 5125465932867349014}
+  - component: {fileID: 418165773610760830}
   m_Layer: 5
   m_Name: Restart button
   m_TagString: Untagged
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5125465932867349014}
-        m_TargetAssemblyTypeName: InGameButtons, Assembly-CSharp
-        m_MethodName: RestartThisScene
+      - m_Target: {fileID: 418165773610760830}
+        m_TargetAssemblyTypeName: TransitionFunctions, Assembly-CSharp
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -237,7 +237,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5125465932867349014
+--- !u!114 &418165773610760830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,13 +246,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5059436910617343543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8677e1c3723074f4680d2808fb38bdbc, type: 3}
+  m_Script: {fileID: 11500000, guid: b3b084f71b96e144ebdab1b72c7c82bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  simulationManager: {fileID: 0}
-  HomeSceneIndex: 0
-  ActivatedSprite: {fileID: 21300000, guid: f34150683867ccc4c96102fc57be8f8e, type: 3}
+  animator: {fileID: 0}
+  destinationScene: 0
+  Reload: 1
 --- !u!1 &5501848462572122554
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +264,7 @@ GameObject:
   - component: {fileID: 2190197167862790383}
   - component: {fileID: 2852352668041762075}
   - component: {fileID: 1671932084951246614}
-  - component: {fileID: 8591548374251315400}
+  - component: {fileID: 8667435972682505507}
   m_Layer: 5
   m_Name: Home Button
   m_TagString: Untagged
@@ -375,9 +374,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8591548374251315400}
-        m_TargetAssemblyTypeName: InGameButtons, Assembly-CSharp
-        m_MethodName: GoToHomeScreen
+      - m_Target: {fileID: 8667435972682505507}
+        m_TargetAssemblyTypeName: TransitionFunctions, Assembly-CSharp
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -387,7 +386,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8591548374251315400
+--- !u!114 &8667435972682505507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -396,13 +395,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5501848462572122554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8677e1c3723074f4680d2808fb38bdbc, type: 3}
+  m_Script: {fileID: 11500000, guid: b3b084f71b96e144ebdab1b72c7c82bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  simulationManager: {fileID: 0}
-  HomeSceneIndex: 0
-  ActivatedSprite: {fileID: 21300000, guid: f34150683867ccc4c96102fc57be8f8e, type: 3}
+  animator: {fileID: 0}
+  destinationScene: 0
+  Reload: 0
 --- !u!1 &9026544271815066329
 GameObject:
   m_ObjectHideFlags: 0

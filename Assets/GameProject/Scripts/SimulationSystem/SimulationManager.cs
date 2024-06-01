@@ -86,9 +86,8 @@ public class SimulationManager : MonoBehaviour
 
             if (nextObject.CompareTag("Finish"))
             {
-                Debug.Log("Scenario 1");    
                 StartCoroutine(MoveObjectToPosition(this.transform, nextObject.transform.position, movementSpeed));
-                completed = true;
+                
             }
             
             else if(nextObject.CompareTag(currObject.tag) && !nextObject.CompareTag("Rotation"))  //The same block type is next
@@ -132,8 +131,17 @@ public class SimulationManager : MonoBehaviour
         }
         else if(nextObject == null)
         {
-            Debug.Log("Scenario fail 3-1");
-            failed = true;
+            if (currObject.CompareTag("Finish"))
+            {
+                Debug.Log("Scenario 1");
+                completed = true;
+            }
+
+            else
+            {
+                Debug.Log("Scenario fail 3-1");
+                failed = true;
+            }
         }
     }
 

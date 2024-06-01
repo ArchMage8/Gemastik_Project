@@ -198,25 +198,25 @@ public class BlockMovement : MonoBehaviour
 
         if (playerDetectManager.NortheastDetected) //NorthEast
         {
-            Debug.Log("Test1");
+           
             temp.Direction = 8;
         }
 
         else if (playerDetectManager.NorthwestDetected) //NorthWest
         {
-            Debug.Log("Test2");
+            
             temp.Direction = 7;
         }
 
         else if (playerDetectManager.SoutheastDetected) //SouthEast
         {
-            Debug.Log("Test3");
+           
             temp.Direction = 6;
         }
 
         else if (playerDetectManager.SouthwestDetected) //SouthWest
         {
-            Debug.Log("Test4");
+           
             temp.Direction = 5;
         }
     }
