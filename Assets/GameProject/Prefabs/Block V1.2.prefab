@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 7
-  currentType: 0
+  currentTargetType: 0
 --- !u!1 &8637215615173189026
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,6 +265,7 @@ MonoBehaviour:
   directionAngle: 26.5
   rayLength: 0.25
   parentObject: {fileID: 8637215616124003305}
+  PlayerObject: {fileID: 0}
   detect: 0
 --- !u!1 &8637215615984257621
 GameObject:
@@ -363,6 +364,7 @@ MonoBehaviour:
   directionAngle: 153.5
   rayLength: 0.25
   parentObject: {fileID: 8637215616124003305}
+  PlayerObject: {fileID: 0}
   detect: 0
 --- !u!1 &8637215616124003305
 GameObject:
@@ -565,7 +567,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockToMove: {fileID: 8637215616124003305}
-  moveSpeed: 5
+  directionFloat: 0
+  moveSpeed: 1
+  isMoving: 0
   playerCollide: 0
   inRay: 0
 --- !u!1 &8637215616590838729
@@ -616,6 +620,7 @@ MonoBehaviour:
   directionAngle: 206.5
   rayLength: 0.25
   parentObject: {fileID: 8637215616124003305}
+  PlayerObject: {fileID: 0}
   detect: 0
 --- !u!1 &8637215616763364345
 GameObject:
@@ -665,6 +670,7 @@ MonoBehaviour:
   directionAngle: -26.5
   rayLength: 0.25
   parentObject: {fileID: 8637215616124003305}
+  PlayerObject: {fileID: 0}
   detect: 0
 --- !u!1 &8637215616787386666
 GameObject:
@@ -771,3 +777,4 @@ MonoBehaviour:
   SoutheastDetected: 0
   SouthwestDetected: 0
   NorthwestDetected: 0
+  playerObject: {fileID: 0}

@@ -124,7 +124,7 @@ public class DialogueManager : MonoBehaviour
         DogBox.enabled = false;
         ManBox.enabled = false;
         ScreenFilter.SetActive(false);
-        NavButtons.SetActive(false);
+        NavButtons.SetActive(true);
     }
 
     void UpdateCharacterPictures()
