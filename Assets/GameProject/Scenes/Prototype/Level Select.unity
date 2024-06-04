@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 52314929}
   destinationScene: 3
-  buttonSound: {fileID: 0}
+  buttonSound: {fileID: 767088726}
   Reload: 0
 --- !u!114 &962248603
 MonoBehaviour:
@@ -2091,7 +2091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 52314929}
   destinationScene: 2
-  buttonSound: {fileID: 0}
+  buttonSound: {fileID: 767088726}
   Reload: 0
 --- !u!114 &1270296461
 MonoBehaviour:
@@ -2951,7 +2951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 52314929}
   destinationScene: 4
-  buttonSound: {fileID: 0}
+  buttonSound: {fileID: 767088726}
   Reload: 0
 --- !u!114 &1542133478
 MonoBehaviour:
