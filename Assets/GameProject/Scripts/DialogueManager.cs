@@ -41,19 +41,24 @@ public class DialogueManager : MonoBehaviour
 
     private int indexValue = 0;
     private bool canProgress = false; // Flag to control the ability to move to the next dialogue index
+    private bool canSound = true;
 
     void Start()
     {
         StartCoroutine(InitializeDialogues());
         UpdateCharacterPictures();
         NavButtons.SetActive(false);
+        canSound = true;
     }
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canProgress)
         {
-            buttonPress.Play();
+            if (canSound)
+            {
+                buttonPress.Play();
+            }
             StartCoroutine(NextDialogueWithDelay());
         }
     }
@@ -111,6 +116,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogues()
     {
         Time.timeScale = 1f;
+        canSound = false;
         playerController.enabled = true;
 
         foreach (CharacterPicture characterPicture in CharacterPictures)
