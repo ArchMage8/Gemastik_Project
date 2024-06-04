@@ -17,6 +17,7 @@ public class BlockMovement : MonoBehaviour
     private bool canMove = false;
     public bool playerCollide = false;
     public bool inRay = false;
+    [SerializeField] private AudioSource blockMoveSound;
 
 
     private PlayerController playerController;
@@ -31,14 +32,14 @@ public class BlockMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && playerCollide)
         {
-          
+            
             GetDirection();
             ForceDirection();
             MoveCheck();
 
             if (!isMoving && blockToMove != null && canMove && inRay)
             {
-                
+                StartCoroutine(blockSound());
                 SetTargetPosition();
                 isMoving = true;
             }
@@ -76,6 +77,7 @@ public class BlockMovement : MonoBehaviour
 
     void MoveBlock()
     {
+        
         float step = moveSpeed * Time.deltaTime;
         blockToMove.transform.position = Vector3.MoveTowards(blockToMove.transform.position, targetPosition, step);
 
@@ -193,32 +195,44 @@ public class BlockMovement : MonoBehaviour
 
     private void ForceDirection()
     {
-        GameObject player = playerDetectManager.playerObject.gameObject;
-        PlayerAnimation temp = player.GetComponentInChildren<PlayerAnimation>();
 
-        if (playerDetectManager.NortheastDetected) //NorthEast
+        if (playerDetectManager.playerObject != null)
         {
-           
-            temp.Direction = 8;
-        }
 
-        else if (playerDetectManager.NorthwestDetected) //NorthWest
-        {
-            
-            temp.Direction = 7;
-        }
+            GameObject player = playerDetectManager.playerObject.gameObject;
+            PlayerAnimation temp = player.GetComponentInChildren<PlayerAnimation>();
 
-        else if (playerDetectManager.SoutheastDetected) //SouthEast
-        {
-           
-            temp.Direction = 6;
-        }
 
-        else if (playerDetectManager.SouthwestDetected) //SouthWest
-        {
-           
-            temp.Direction = 5;
+            if (playerDetectManager.NortheastDetected) //NorthEast
+            {
+
+                temp.Direction = 8;
+            }
+
+            else if (playerDetectManager.NorthwestDetected) //NorthWest
+            {
+
+                temp.Direction = 7;
+            }
+
+            else if (playerDetectManager.SoutheastDetected) //SouthEast
+            {
+
+                temp.Direction = 6;
+            }
+
+            else if (playerDetectManager.SouthwestDetected) //SouthWest
+            {
+
+                temp.Direction = 5;
+            }
         }
+    }
+
+    private IEnumerator blockSound()
+    {
+        blockMoveSound.Play();
+      yield return null;
     }
 }
 

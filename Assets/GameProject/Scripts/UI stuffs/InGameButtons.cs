@@ -10,14 +10,17 @@ public class InGameButtons : MonoBehaviour
     [SerializeField] private SimulationManager simulationManager;
     [SerializeField] private int HomeSceneIndex;
     [SerializeField] private Sprite ActivatedSprite;
+    [SerializeField] private AudioSource buttonSound;
 
     public void RestartThisScene()
     {
+        buttonSound.Play();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void StartSim()
     {
+        buttonSound.Play();
         playerController.enabled = false;
         simulationManager.isSimulating = true;
 
@@ -26,6 +29,7 @@ public class InGameButtons : MonoBehaviour
 
     public void GoToHomeScreen()
     {
+        buttonSound.Play();
         SceneManager.LoadScene(HomeSceneIndex);
     }
 }

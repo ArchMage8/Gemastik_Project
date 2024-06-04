@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     public float delay = 2f; // Time delay before allowing the next dialogue index
     public PlayerController playerController;
     public GameObject NavButtons;
+    [SerializeField] private AudioSource buttonPress;
 
 
     private int indexValue = 0;
@@ -52,6 +53,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && canProgress)
         {
+            buttonPress.Play();
             StartCoroutine(NextDialogueWithDelay());
         }
     }

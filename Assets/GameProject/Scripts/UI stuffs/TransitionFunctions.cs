@@ -7,12 +7,13 @@ public class TransitionFunctions : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     [SerializeField] private int destinationScene;
-
+    [SerializeField] private AudioSource buttonSound;
     [SerializeField] private bool Reload;
     
 
     public void LoadNextScene()
     {
+        buttonSound.Play();
         StartCoroutine(Toggler());
     }
 
