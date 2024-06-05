@@ -30,6 +30,8 @@ public class BlockMovement : MonoBehaviour
 
     private void Update()
     {
+        Transparency();
+
         if (Input.GetKeyDown(KeyCode.Space) && playerCollide)
         {
             
@@ -233,6 +235,26 @@ public class BlockMovement : MonoBehaviour
     {
         blockMoveSound.Play();
       yield return null;
+    }
+
+    private void Transparency()
+    {
+        if (playerDetectManager.playerObject != null)
+        {
+            Color temp = gameObject.GetComponent<SpriteRenderer>().color;
+
+            if (playerDetectManager.NorthwestDetected || playerDetectManager.NortheastDetected)
+            {
+               
+                temp.a = 190f/255f;
+                this.gameObject.GetComponent<SpriteRenderer>().color = temp;
+            }
+            else
+            {
+                temp.a = 255f/255f;
+                this.gameObject.GetComponent<SpriteRenderer>().color = temp;
+            }
+        }
     }
 }
 
