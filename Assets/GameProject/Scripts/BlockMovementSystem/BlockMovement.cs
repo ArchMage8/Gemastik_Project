@@ -4,28 +4,44 @@ using UnityEngine;
 
 public class BlockMovement : MonoBehaviour
 {
-    public GameObject blockToMove;
+    private GameObject blockToMove;
     
-    public float directionFloat;
+    [HideInInspector] public float directionFloat;
     private DetectionManager detectionManager;
     private PlayerDetectManager playerDetectManager ;
 
+    [Header("System: ")]
     public float moveSpeed = 5f;
+    [SerializeField] private AudioSource blockMoveSound;
 
     private Vector3 targetPosition;
     [HideInInspector] public bool isMoving = false;
     private bool canMove = false;
     [HideInInspector] public bool playerCollide = false;
     [HideInInspector] public bool inRay = false;
-    [SerializeField] private AudioSource blockMoveSound;
 
+    [Space(10)]
+    [Header("Smoke System: ")]
+    [SerializeField] public GameObject NW;
+    [SerializeField] public GameObject SW;
+    [SerializeField] public GameObject SE;
+    [SerializeField] public GameObject NE;
 
     private PlayerController playerController;
+    private bool canSmoke = true;
 
     private void Start()
     {
+        blockToMove = this.gameObject;
+
         detectionManager = GetComponentInChildren<DetectionManager>();
         playerDetectManager = GetComponentInChildren<PlayerDetectManager>();
+
+        NW.SetActive(false);
+        SW.SetActive(false);
+        SE.SetActive(false);
+        NE.SetActive(false);
+
     }
 
     private void Update()
@@ -82,11 +98,15 @@ public class BlockMovement : MonoBehaviour
         
         float step = moveSpeed * Time.deltaTime;
         blockToMove.transform.position = Vector3.MoveTowards(blockToMove.transform.position, targetPosition, step);
+        ActivateSmoke();
+        canSmoke = false;
 
         if (Vector3.Distance(blockToMove.transform.position, targetPosition) < 0.001f)
         {
             blockToMove.transform.position = targetPosition;
             isMoving = false;
+            canSmoke = true;
+            StartCoroutine(DeactivateAllSmoke());
         }
     }
 
@@ -255,6 +275,52 @@ public class BlockMovement : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().color = temp;
             }
         }
+    }
+
+    private void ActivateSmoke()
+    {
+        if (isMoving && canSmoke)
+        {
+            if (playerDetectManager.NortheastDetected) //NorthEast
+            {
+                SW.SetActive(true);
+                Debug.Log("NE Smoke");
+            }
+
+            else if (playerDetectManager.NorthwestDetected) //NorthWest
+            {
+                SE.SetActive(true);
+                Debug.Log("NW Smoke");
+            }
+
+            else if (playerDetectManager.SoutheastDetected) //SouthEast
+            {
+                NW.SetActive(true);
+                Debug.Log("SE Smoke");
+            }
+
+            else if (playerDetectManager.SouthwestDetected) //SouthWest
+            {
+                NE.SetActive(true);
+                Debug.Log("SW Smoke");
+            }
+        }
+
+        else if (!isMoving)
+        {
+            Debug.Log("Deactivation");
+            StartCoroutine(DeactivateAllSmoke());
+        }
+        
+    }
+
+    private IEnumerator DeactivateAllSmoke()
+    {
+       yield return new WaitForSeconds(0.4f);
+        NW.SetActive(false);
+        SW.SetActive(false);
+        SE.SetActive(false);
+        NE.SetActive(false);
     }
 }
 
