@@ -21,7 +21,10 @@ public class DialogueManager : MonoBehaviour
     [Space(20)]
     public CharacterPicture[] CharacterPictures;
     [Space(20)]
-    public TMP_Text[] Dialogues;
+    [Header("Boxes:")]
+    public TextMeshProUGUI TextHolder;
+    public string[] Dialogues;
+
     [Space(20)]
     public Speaker[] Speakers;
 
@@ -42,6 +45,8 @@ public class DialogueManager : MonoBehaviour
     private int indexValue = 0;
     private bool canProgress = false; // Flag to control the ability to move to the next dialogue index
     private bool canSound = true;
+
+    private float writeSpeed = 0.1f;
 
     void Start()
     {
@@ -89,13 +94,12 @@ public class DialogueManager : MonoBehaviour
             characterPicture.Picture.gameObject.SetActive(false);
         }
 
-        foreach (TMP_Text dialogue in Dialogues)
-        {
-            dialogue.gameObject.SetActive(false);
-        }
 
         if (Dialogues.Length > 0)
-            Dialogues[0].gameObject.SetActive(true);
+        {
+            NextSentence();
+        }
+            
 
         if (CharacterPictures.Length > 0)
             CharacterPictures[0].Picture.gameObject.SetActive(true);
@@ -108,8 +112,7 @@ public class DialogueManager : MonoBehaviour
 
     void UpdateDialogues()
     {
-        Dialogues[indexValue - 1].gameObject.SetActive(false);
-        Dialogues[indexValue].gameObject.SetActive(true);
+        NextSentence();
         UpdateCharacterPictures();
     }
 
@@ -124,10 +127,6 @@ public class DialogueManager : MonoBehaviour
             characterPicture.Picture.gameObject.SetActive(false);
         }
 
-        foreach (TMP_Text dialogue in Dialogues)
-        {
-            dialogue.gameObject.SetActive(false);
-        }
 
         DogBox.enabled = false;
         ManBox.enabled = false;
@@ -185,8 +184,24 @@ public class DialogueManager : MonoBehaviour
     {
         playerController.enabled = false;
         yield return new WaitForSeconds(1f);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
-    
+    private IEnumerator WriteSentences()
+    {
+            foreach (char Character in Dialogues[indexValue].ToCharArray())
+            {
+            TextHolder.text += Character;
+            yield return new WaitForSeconds(writeSpeed);
+            }   
+    }
+
+    private void NextSentence()
+    {
+        if(indexValue <= Dialogues.Length - 1)
+        {
+            TextHolder.text = "";
+            StartCoroutine(WriteSentences());
+        }
+    }
 }
