@@ -59,11 +59,11 @@ public class DialogueManager : MonoBehaviour
             {
                 buttonPress.Play();
             }
-            StartCoroutine(NextDialogueWithDelay());
+            StartCoroutine(NextDialogue());
         }
     }
 
-    IEnumerator NextDialogueWithDelay()
+    IEnumerator NextDialogue()
     {
         canProgress = false; // Disable progression while coroutine is active
        
@@ -187,4 +187,6 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Time.timeScale = 0f;
     }
+
+    
 }

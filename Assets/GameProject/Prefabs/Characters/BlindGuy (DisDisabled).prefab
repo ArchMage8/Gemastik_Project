@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 1094941428097398060}
   - component: {fileID: 1094941428097398056}
   m_Layer: 0
-  m_Name: BlindGuy Depreciated
+  m_Name: BlindGuy (DisDisabled)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

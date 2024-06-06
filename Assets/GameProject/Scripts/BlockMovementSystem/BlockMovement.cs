@@ -22,10 +22,13 @@ public class BlockMovement : MonoBehaviour
 
     [Space(10)]
     [Header("Smoke System: ")]
-    [SerializeField] public GameObject NW;
-    [SerializeField] public GameObject SW;
-    [SerializeField] public GameObject SE;
-    [SerializeField] public GameObject NE;
+    [SerializeField] private GameObject NW;
+    [SerializeField] private GameObject SW;
+    [SerializeField] private GameObject SE;
+    [SerializeField] private GameObject NE;
+    [Space(5)]
+    [SerializeField] private float DeactivateDelay = 0.5f;
+    
 
     private PlayerController playerController;
     private bool canSmoke = true;
@@ -316,7 +319,7 @@ public class BlockMovement : MonoBehaviour
 
     private IEnumerator DeactivateAllSmoke()
     {
-       yield return new WaitForSeconds(0.4f);
+       yield return new WaitForSeconds(DeactivateDelay);
         NW.SetActive(false);
         SW.SetActive(false);
         SE.SetActive(false);
