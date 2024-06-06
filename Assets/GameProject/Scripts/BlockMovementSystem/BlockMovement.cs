@@ -13,10 +13,10 @@ public class BlockMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     private Vector3 targetPosition;
-    public bool isMoving = false;
+    [HideInInspector] public bool isMoving = false;
     private bool canMove = false;
-    public bool playerCollide = false;
-    public bool inRay = false;
+    [HideInInspector] public bool playerCollide = false;
+    [HideInInspector] public bool inRay = false;
     [SerializeField] private AudioSource blockMoveSound;
 
 
