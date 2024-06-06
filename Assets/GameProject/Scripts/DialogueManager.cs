@@ -46,7 +46,7 @@ public class DialogueManager : MonoBehaviour
     private bool canProgress = false; // Flag to control the ability to move to the next dialogue index
     private bool canSound = true;
 
-    private float writeSpeed = 0.1f;
+    [SerializeField] private float writeSpeed = 0.1f;
 
     void Start()
     {

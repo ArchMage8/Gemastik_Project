@@ -251,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   destinationScene: 0
+  buttonSound: {fileID: 0}
   Reload: 1
 --- !u!1 &5501848462572122554
 GameObject:
@@ -400,6 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   destinationScene: 0
+  buttonSound: {fileID: 0}
   Reload: 0
 --- !u!1 &9026544271815066329
 GameObject:
@@ -551,3 +553,4 @@ MonoBehaviour:
   simulationManager: {fileID: 0}
   HomeSceneIndex: 0
   ActivatedSprite: {fileID: 21300000, guid: f34150683867ccc4c96102fc57be8f8e, type: 3}
+  buttonSound: {fileID: 0}

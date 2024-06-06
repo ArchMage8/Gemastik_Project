@@ -6144,6 +6144,7 @@ MonoBehaviour:
   delay: 2
   playerController: {fileID: 0}
   NavButtons: {fileID: 0}
+  buttonPress: {fileID: 0}
 --- !u!4 &1367617197
 Transform:
   m_ObjectHideFlags: 0
@@ -12036,6 +12037,7 @@ MonoBehaviour:
   delay: 0.5
   playerController: {fileID: 1464881820}
   NavButtons: {fileID: 4417888267356923913}
+  buttonPress: {fileID: 0}
 --- !u!1 &4491838689851707198
 GameObject:
   m_ObjectHideFlags: 0

@@ -287,31 +287,31 @@ public class BlockMovement : MonoBehaviour
             if (playerDetectManager.NortheastDetected) //NorthEast
             {
                 SW.SetActive(true);
-                Debug.Log("NE Smoke");
+                //Debug.Log("NE Smoke");
             }
 
             else if (playerDetectManager.NorthwestDetected) //NorthWest
             {
                 SE.SetActive(true);
-                Debug.Log("NW Smoke");
+                //Debug.Log("NW Smoke");
             }
 
             else if (playerDetectManager.SoutheastDetected) //SouthEast
             {
                 NW.SetActive(true);
-                Debug.Log("SE Smoke");
+                //Debug.Log("SE Smoke");
             }
 
             else if (playerDetectManager.SouthwestDetected) //SouthWest
             {
                 NE.SetActive(true);
-                Debug.Log("SW Smoke");
+                //Debug.Log("SW Smoke");
             }
         }
 
         else if (!isMoving)
         {
-            Debug.Log("Deactivation");
+            //Debug.Log("Deactivation");
             StartCoroutine(DeactivateAllSmoke());
         }
         
