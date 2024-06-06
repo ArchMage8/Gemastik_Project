@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class InGameButtons : MonoBehaviour
@@ -11,6 +12,14 @@ public class InGameButtons : MonoBehaviour
     [SerializeField] private int HomeSceneIndex;
     [SerializeField] private Sprite ActivatedSprite;
     [SerializeField] private AudioSource buttonSound;
+
+    private Image buttonImage;
+
+    private void Start()
+    {
+        buttonImage = GetComponent<Image>();
+    }
+
 
     public void RestartThisScene()
     {
@@ -24,7 +33,7 @@ public class InGameButtons : MonoBehaviour
         playerController.enabled = false;
         simulationManager.isSimulating = true;
 
-        GetComponent<SpriteRenderer>().sprite = ActivatedSprite;
+        buttonImage.sprite = ActivatedSprite;
     }
 
     public void GoToHomeScreen()
