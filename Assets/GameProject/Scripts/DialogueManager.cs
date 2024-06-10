@@ -132,7 +132,7 @@ public class DialogueManager : MonoBehaviour
         ManBox.enabled = false;
         ScreenFilter.SetActive(false);
         NavButtons.SetActive(true);
-        TextHolder.SetActive(false);
+        TextHolder.enabled = false;
     }
 
     void UpdateCharacterPictures()
