@@ -3231,6 +3231,7 @@ MonoBehaviour:
   animator: {fileID: 457877476167644664}
   destinationScene: 1
   buttonSound: {fileID: 1191075845}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!114 &755813121
 MonoBehaviour:
@@ -4646,6 +4647,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 587117990}
     m_Modifications:
+    - target: {fileID: 2249984476108852977, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 1191075845}
     - target: {fileID: 3635610632980091653, guid: a965e756b90ae3245bf9f1e811400deb,
         type: 3}
       propertyPath: m_Name
@@ -6231,6 +6237,7 @@ MonoBehaviour:
   animator: {fileID: 457877476167644664}
   destinationScene: 2
   buttonSound: {fileID: 1191075845}
+  BGMusic: {fileID: 0}
   Reload: 1
 --- !u!114 &1436845697
 MonoBehaviour:
