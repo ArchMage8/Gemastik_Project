@@ -3081,6 +3081,7 @@ MonoBehaviour:
   animator: {fileID: 457877476167644664}
   destinationScene: 1
   buttonSound: {fileID: 0}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!114 &755813121
 MonoBehaviour:
@@ -5394,6 +5395,7 @@ MonoBehaviour:
   animator: {fileID: 457877476167644664}
   destinationScene: 2
   buttonSound: {fileID: 0}
+  BGMusic: {fileID: 0}
   Reload: 1
 --- !u!114 &1436845697
 MonoBehaviour:
@@ -7759,7 +7761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1793322734
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8227,7 +8229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1916616142
 RectTransform:
   m_ObjectHideFlags: 0

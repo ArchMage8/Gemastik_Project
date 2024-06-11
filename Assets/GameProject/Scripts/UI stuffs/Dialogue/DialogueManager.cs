@@ -48,6 +48,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private float writeSpeed = 0.1f;
 
+    private int refLength;
+
     private bool dialogueDone = false;
 
     void Start()
@@ -56,17 +58,20 @@ public class DialogueManager : MonoBehaviour
         UpdateCharacterPictures();
         NavButtons.SetActive(false);
         canSound = true;
+
+        refLength = CharacterPictures.Length;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canProgress && dialogueDone)
+        if (Input.GetMouseButtonDown(0) && canProgress && dialogueDone && indexValue != refLength)
         {
             if (canSound)
             {
                 buttonPress.Play();
             }
             StartCoroutine(NextDialogue());
+            Debug.Log(indexValue);
         }
     }
 
@@ -120,6 +125,8 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogues()
     {
+        indexValue = refLength;
+
         Time.timeScale = 1f;
         canSound = false;
         playerController.enabled = true;

@@ -17,7 +17,7 @@ public class DialogueSkip : MonoBehaviour
     {
         
         dialogueManager.EndDialogues();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.001f);
         this.gameObject.SetActive(false);
     }
 }
