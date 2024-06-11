@@ -48,6 +48,8 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private float writeSpeed = 0.1f;
 
+    private bool dialogueDone = false;
+
     void Start()
     {
         StartCoroutine(InitializeDialogues());
@@ -58,7 +60,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canProgress)
+        if (Input.GetMouseButtonDown(0) && canProgress && dialogueDone)
         {
             if (canSound)
             {
@@ -190,11 +192,13 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator WriteSentences()
     {
+        dialogueDone = false;
             foreach (char Character in Dialogues[indexValue].ToCharArray())
             {
             TextHolder.text += Character;
             yield return new WaitForSeconds(writeSpeed);
-            }   
+            }
+        dialogueDone = true;
     }
 
     private void NextSentence()
@@ -204,5 +208,6 @@ public class DialogueManager : MonoBehaviour
             TextHolder.text = "";
             StartCoroutine(WriteSentences());
         }
+        
     }
 }

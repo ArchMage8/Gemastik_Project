@@ -4718,6 +4718,11 @@ PrefabInstance:
       objectReference: {fileID: 1460480562}
     - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
         type: 3}
+      propertyPath: writeSpeed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
       propertyPath: buttonPress
       value: 
       objectReference: {fileID: 1191075845}

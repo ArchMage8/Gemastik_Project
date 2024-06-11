@@ -7,7 +7,9 @@ public class VehicleMover : MonoBehaviour
     public GameObject prefab;
     public GameObject destination;
     public float timeDelay = 15f;
-    public float speed;
+    private int speed;
+    [SerializeField] private int min_speed;
+    [SerializeField] private int max_speed;
     public float fadeRate;
 
     private bool canFadeOut = true;
@@ -15,6 +17,11 @@ public class VehicleMover : MonoBehaviour
     void Start()
     {
         StartCoroutine(ObjectGenerator());
+    }
+
+    private void Update()
+    {
+        Debug.Log(speed);
     }
 
     private IEnumerator ObjectGenerator()
@@ -53,6 +60,7 @@ public class VehicleMover : MonoBehaviour
 
             while (Vector2.Distance(obj.transform.position, destination.transform.position) > 0.1f)
             {
+                RandomizerSpeed();
                 obj.transform.position = Vector2.MoveTowards(obj.transform.position, destination.transform.position, speed * Time.deltaTime);
 
                 // Check if the object is 2 units away from the destination
@@ -106,5 +114,10 @@ public class VehicleMover : MonoBehaviour
         spriteRenderer.color = color;
         Destroy(obj);
         canFadeOut = true;
+    }
+
+    private void RandomizerSpeed()
+    {
+        speed = Random.Range(min_speed, max_speed);
     }
 }
