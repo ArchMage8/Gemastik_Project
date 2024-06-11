@@ -20,13 +20,6 @@ public class InGameButtons : MonoBehaviour
         buttonImage = GetComponent<Image>();
     }
 
-
-    public void RestartThisScene()
-    {
-        buttonSound.Play();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
     public void StartSim()
     {
         buttonSound.Play();
@@ -34,11 +27,5 @@ public class InGameButtons : MonoBehaviour
         simulationManager.isSimulating = true;
 
         buttonImage.sprite = ActivatedSprite;
-    }
-
-    public void GoToHomeScreen()
-    {
-        buttonSound.Play();
-        SceneManager.LoadScene(HomeSceneIndex);
     }
 }

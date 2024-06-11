@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TransitionFunctions : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [SerializeField] private int destinationScene;
+    public int destinationScene;
     [SerializeField] private AudioSource buttonSound;
     [SerializeField] private bool Reload;
     

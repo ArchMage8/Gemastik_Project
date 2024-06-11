@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour
         UpdateCharacterPictures();
     }
 
-    void EndDialogues()
+    public void EndDialogues()
     {
         Time.timeScale = 1f;
         canSound = false;
