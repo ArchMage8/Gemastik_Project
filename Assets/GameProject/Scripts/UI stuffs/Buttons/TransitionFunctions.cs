@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking.Types;
 using UnityEngine.SceneManagement;
 
 public class TransitionFunctions : MonoBehaviour
@@ -8,6 +9,7 @@ public class TransitionFunctions : MonoBehaviour
     [SerializeField] private Animator animator;
     public int destinationScene;
     [SerializeField] private AudioSource buttonSound;
+    [SerializeField] private AudioSource BGMusic;
     [SerializeField] private bool Reload;
     
 
@@ -34,4 +36,18 @@ public class TransitionFunctions : MonoBehaviour
         }
 
     }
+
+    private IEnumerator FadeOutMusic()
+    {
+        float startVolume = BGMusic.volume;
+
+        for (float t = 0; t < 1.2f; t += Time.deltaTime)
+        {
+            BGMusic.volume = Mathf.Lerp(startVolume, 0, t / 1.2f);
+            yield return null;
+        }
+
+        BGMusic.volume = 0;
+    }
 }
+
