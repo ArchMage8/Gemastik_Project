@@ -4733,8 +4733,273 @@ PrefabInstance:
       objectReference: {fileID: 546121480}
     - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
         type: 3}
+      propertyPath: Speakers.Array.size
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.size
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[5]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[6]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[7]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[8]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[9]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[0]
+      value: Halo Anjing Kecil, ada apa?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[1]
+      value: Aku ingin membantu gadis itu, dia tampak kesulitan...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
       propertyPath: Dialogues.Array.data[2]
-      value: Ayo kita bantu dia!
+      value: Kamu... bisa bicara??
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[3]
+      value: Ternyata aku bisa...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[4]
+      value: Oke.. Itu sangat aneh.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[5]
+      value: Mari kita bicarakan ini nanti... Gadis itu, kamu tahu apa yang salah
+        dengannya?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[6]
+      value: Oh ya, aku tahu gadis itu, dia tuna netra.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[7]
+      value: Apa artinya itu?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[8]
+      value: Dia tidak bisa melihat, makanya dia menggunakan tongkat jalan itu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[9]
+      value: Untuk apa tongkat itu? Apakah aku harus mengambilnya?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[10]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[11]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[12]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[13]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[14]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[15]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[16]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[17]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[18]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[19]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[20]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[21]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[22]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[23]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[24]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[25]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[26]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Speakers.Array.data[27]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[10]
+      value: Tidak, tidak! Lihat, blok kuning ini, gadis itu menggunakannya.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[11]
+      value: Dia menyeret tongkatnya melintasi tonjolan untuk memastikan dia masih
+        di jalur yang benar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[12]
+      value: Bagaimana cara kerjanya?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[13]
+      value: 'Oke, biar aku jelaskan:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[14]
+      value: Ketika tongkat menyentuh tonjolan saat digerakkan dari kiri ke kanan.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[15]
+      value: Gadis itu merasakan pola tertentu saat tongkat menyentuh tonjolan.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[16]
+      value: Ini berarti trotoar masih berjalan ke arah yang sama.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[17]
+      value: Tapi jika polanya berubah, gadis itu harus mempertimbangkan ulang arah
+        jalannya.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[18]
+      value: Jadi, ubin kuning itu sangat penting.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[19]
+      value: Itu disebut "Tactile Paving" dan ya, itu sangat penting.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[20]
+      value: Tapi kenapa tersebar secara acak, bukankah seharusnya membentuk trotoar?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[21]
+      value: Aku tidak bisa memindahkannya sendiri (aku sudah tua), kenapa kamu tidak
+        membantuku?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[22]
+      value: Bagaimana caranya?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[23]
+      value: Gunakan balok-balok ini untuk melengkapi trotoar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[24]
+      value: Ingat, setiap balok yang kamu tempatkan harus diikuti oleh balok lain
+        yang menghadap ke arah yang sama.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[25]
+      value: Gunakan Tombol Spasi untuk mendorong balok-balok itu.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[26]
+      value: Apa itu balok di sudut?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635610633033285012, guid: a965e756b90ae3245bf9f1e811400deb,
+        type: 3}
+      propertyPath: Dialogues.Array.data[27]
+      value: Akan kujelaskan nanti...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a965e756b90ae3245bf9f1e811400deb, type: 3}
