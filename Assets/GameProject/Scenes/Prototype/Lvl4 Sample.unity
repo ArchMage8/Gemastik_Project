@@ -194,7 +194,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 11a5ca594383a7b459a6654fe65afa47,
+      objectReference: {fileID: 21300000, guid: 81384c70b145b654fa7f2ff13244d822,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c86a2356ed36749b49b4a8cb622569, type: 3}
@@ -1482,6 +1482,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7368393745506538860, guid: f0c86a2356ed36749b49b4a8cb622569,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 067325fed1ca1534188f9c4116913de0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c86a2356ed36749b49b4a8cb622569, type: 3}
 --- !u!1001 &465600631
@@ -1776,7 +1782,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9b47c105304770f488637cedb65d01cd,
+      objectReference: {fileID: 21300000, guid: d34d8f87f9a917e43af72932c5215fd1,
         type: 3}
     - target: {fileID: 6060559222105318881, guid: a30bbe90de376564d9a7892e1b663bfe,
         type: 3}
@@ -2499,7 +2505,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5c75574eb9b757446aa64c0d51a95966,
+      objectReference: {fileID: 21300000, guid: 53e87830d4ceef64ea4af17e7511d184,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c86a2356ed36749b49b4a8cb622569, type: 3}
@@ -3167,7 +3173,7 @@ PrefabInstance:
     - target: {fileID: 4162574032456541244, guid: 22e3e2679009f634485bc7339d695ed8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.83
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4162574032456541244, guid: 22e3e2679009f634485bc7339d695ed8,
         type: 3}
@@ -3704,7 +3710,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054204377}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.65, y: 0.75, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3752,7 +3758,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 4a32ca378eda89c45a1f10ad5df8e854, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 24a8a919a791d8d449b323741e711ee0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4192,7 +4198,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5c75574eb9b757446aa64c0d51a95966,
+      objectReference: {fileID: 21300000, guid: 53e87830d4ceef64ea4af17e7511d184,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c86a2356ed36749b49b4a8cb622569, type: 3}
@@ -5747,7 +5753,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 11a5ca594383a7b459a6654fe65afa47,
+      objectReference: {fileID: 21300000, guid: 81384c70b145b654fa7f2ff13244d822,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c86a2356ed36749b49b4a8cb622569, type: 3}
@@ -7417,7 +7423,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 7fb88d2de1019d14b834692f4fe262b2,
+      objectReference: {fileID: 21300000, guid: fc35d39c6e2ef7e41b0ac57dfdcf682a,
         type: 3}
     - target: {fileID: 8269452974125301938, guid: f0c86a2356ed36749b49b4a8cb622569,
         type: 3}
@@ -7875,7 +7881,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 571d17f6a07199a47825ce44a916282c,
+      objectReference: {fileID: 21300000, guid: c0f14cf40a6bd0f4c98b4ff3113f6590,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c86a2356ed36749b49b4a8cb622569, type: 3}
