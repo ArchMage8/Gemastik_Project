@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/GameProject/Scenes/Prototype/Lvl2 Sample.unity
     guid: a850e15e117dab04f95e5efbf57092d7
   - enabled: 1
+    path: Assets/GameProject/Scenes/Prototype/Lvl3 Sample.unity
+    guid: c03bac2c4ff5a684cb6051246386e81c
+  - enabled: 1
     path: Assets/GameProject/Scenes/Prototype/Lvl4 Sample.unity
     guid: 08b9ee2512b9d7f4aab0e2387c3dab75
   m_configObjects: {}
