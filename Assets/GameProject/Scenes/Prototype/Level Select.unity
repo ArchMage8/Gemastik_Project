@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 457877474167784492, guid: d1ad5321bcfcf3a4f8d27c4b99542e04,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1ad5321bcfcf3a4f8d27c4b99542e04, type: 3}
@@ -1266,6 +1266,7 @@ MonoBehaviour:
   animator: {fileID: 52314929}
   destinationScene: 3
   buttonSound: {fileID: 767088726}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!114 &962248603
 MonoBehaviour:
@@ -1594,6 +1595,7 @@ MonoBehaviour:
   animator: {fileID: 52314929}
   destinationScene: 0
   buttonSound: {fileID: 767088726}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!1 &1093411810
 GameObject:
@@ -2092,6 +2094,7 @@ MonoBehaviour:
   animator: {fileID: 52314929}
   destinationScene: 2
   buttonSound: {fileID: 767088726}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!114 &1270296461
 MonoBehaviour:
@@ -2952,6 +2955,7 @@ MonoBehaviour:
   animator: {fileID: 52314929}
   destinationScene: 4
   buttonSound: {fileID: 767088726}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!114 &1542133478
 MonoBehaviour:

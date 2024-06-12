@@ -927,7 +927,7 @@ PrefabInstance:
     - target: {fileID: 3328285207079550294, guid: 1b3e758f3b8e0c04588f9317de8119c1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3328285207079550295, guid: 1b3e758f3b8e0c04588f9317de8119c1,
         type: 3}
@@ -4721,7 +4721,9 @@ MonoBehaviour:
   playerController: {fileID: 0}
   NavButtons: {fileID: 0}
   buttonPress: {fileID: 0}
+  indexValue: 0
   writeSpeed: 0.1
+  refLength: 0
 --- !u!4 &1367617197
 Transform:
   m_ObjectHideFlags: 0

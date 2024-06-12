@@ -496,7 +496,9 @@ MonoBehaviour:
   playerController: {fileID: 0}
   NavButtons: {fileID: 0}
   buttonPress: {fileID: 0}
-  writeSpeed: 0.1
+  indexValue: 0
+  writeSpeed: 0.03
+  refLength: 0
 --- !u!1 &3635610633149349414
 GameObject:
   m_ObjectHideFlags: 0
