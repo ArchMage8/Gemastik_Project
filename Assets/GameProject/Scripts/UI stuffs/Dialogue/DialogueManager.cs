@@ -54,6 +54,8 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        indexValue = 0;
+
         StartCoroutine(InitializeDialogues());
         UpdateCharacterPictures();
         NavButtons.SetActive(false);
