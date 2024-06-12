@@ -75,7 +75,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8637215614996154130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: 0.253, z: 0}
+  m_LocalPosition: {x: -0.007, y: 0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -566,12 +566,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b1aa32b649b63499b62641ed3c3ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockToMove: {fileID: 8637215616124003305}
   directionFloat: 0
   moveSpeed: 1
+  blockMoveSound: {fileID: 0}
   isMoving: 0
   playerCollide: 0
   inRay: 0
+  NW: {fileID: 0}
+  SW: {fileID: 0}
+  SE: {fileID: 0}
+  NE: {fileID: 0}
+  DeactivateDelay: 0.5
 --- !u!1 &8637215616590838729
 GameObject:
   m_ObjectHideFlags: 0
