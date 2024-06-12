@@ -485,25 +485,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10f4f1968329b44a9518645c305ca0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterPictures:
-  - Picture: {fileID: 3635610633700132274}
-    Type: 1
-  - Picture: {fileID: 3635610633870186197}
-    Type: 0
-  - Picture: {fileID: 3635610632510566931}
-    Type: 1
-  - Picture: {fileID: 3635610632336174820}
-    Type: 0
-  - Picture: {fileID: 3635610633704114600}
-    Type: 1
+  CharacterPictures: []
   TextHolder: {fileID: 3635610633149349400}
-  Dialogues:
-  - test1
-  - test2
-  - test3
-  - test4
-  - test5
-  Speakers: 0100000000000000010000000000000001000000
+  Dialogues: []
+  Speakers: 
   DogBox: {fileID: 3635610632990699095}
   ManBox: {fileID: 3635610632395423226}
   ScreenFilter: {fileID: 0}
