@@ -3741,6 +3741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418165773610760830, guid: bd80d24c4ac5068439f0dd4265f7234f,
         type: 3}
+      propertyPath: BGMusic
+      value: 
+      objectReference: {fileID: 1537448057}
+    - target: {fileID: 418165773610760830, guid: bd80d24c4ac5068439f0dd4265f7234f,
+        type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 457877476167644664}
@@ -3799,6 +3804,11 @@ PrefabInstance:
       propertyPath: simulationManager
       value: 
       objectReference: {fileID: 4162574033557998475}
+    - target: {fileID: 8667435972682505507, guid: bd80d24c4ac5068439f0dd4265f7234f,
+        type: 3}
+      propertyPath: BGMusic
+      value: 
+      objectReference: {fileID: 1537448057}
     - target: {fileID: 8667435972682505507, guid: bd80d24c4ac5068439f0dd4265f7234f,
         type: 3}
       propertyPath: animator
@@ -4386,7 +4396,7 @@ MonoBehaviour:
   animator: {fileID: 457877476167644664}
   destinationScene: 1
   buttonSound: {fileID: 1191075845}
-  BGMusic: {fileID: 0}
+  BGMusic: {fileID: 1537448057}
   Reload: 0
 --- !u!114 &755813121
 MonoBehaviour:
@@ -7474,7 +7484,7 @@ MonoBehaviour:
   animator: {fileID: 457877476167644664}
   destinationScene: 2
   buttonSound: {fileID: 1191075845}
-  BGMusic: {fileID: 0}
+  BGMusic: {fileID: 1537448057}
   Reload: 1
 --- !u!114 &1436845697
 MonoBehaviour:
@@ -7669,7 +7679,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 09adb0ef07c40834ba95570943f4d5a1, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
