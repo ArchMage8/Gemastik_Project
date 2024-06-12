@@ -3254,7 +3254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1121608095}
   destinationScene: 1
-  buttonSound: {fileID: 0}
+  buttonSound: {fileID: 886770205}
   BGMusic: {fileID: 0}
   Reload: 0
 --- !u!114 &486236026
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1121608095}
   destinationScene: 2
-  buttonSound: {fileID: 0}
+  buttonSound: {fileID: 886770205}
   BGMusic: {fileID: 0}
   Reload: 1
 --- !u!114 &670352410
