@@ -7,6 +7,11 @@ public class DialogueSkip : MonoBehaviour
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private AudioSource buttonSound;
 
+    private void Update()
+    {
+        checkComplete();
+    }
+
     public void SkipDialogue()
     {
         buttonSound.Play();
@@ -19,5 +24,13 @@ public class DialogueSkip : MonoBehaviour
         dialogueManager.EndDialogues();
         yield return new WaitForSeconds(0.001f);
         this.gameObject.SetActive(false);
+    }
+
+    private void checkComplete()
+    {
+        if (dialogueManager.indexValue == dialogueManager.refLength)
+        {
+            StartCoroutine(disableSelf());
+        }
     }
 }

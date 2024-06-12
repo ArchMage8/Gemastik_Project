@@ -42,13 +42,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private AudioSource buttonPress;
 
 
-    private int indexValue = 0;
+    [HideInInspector]public int indexValue = 0;
     private bool canProgress = false; // Flag to control the ability to move to the next dialogue index
     private bool canSound = true;
 
     [SerializeField] private float writeSpeed = 0.1f;
 
-    private int refLength;
+    [HideInInspector]public int refLength;
 
     private bool dialogueDone = false;
 
