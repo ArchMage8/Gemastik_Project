@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VehicleMover : MonoBehaviour
+public class ObjectGenerator : MonoBehaviour
 {
     public GameObject prefab;
     public GameObject destination;
@@ -16,7 +16,7 @@ public class VehicleMover : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(ObjectGenerator());
+        StartCoroutine(ObjectGeneration());
     }
 
     private void Update()
@@ -24,7 +24,7 @@ public class VehicleMover : MonoBehaviour
         Debug.Log(speed);
     }
 
-    private IEnumerator ObjectGenerator()
+    private IEnumerator ObjectGeneration()
     {
         while (true)
         {
