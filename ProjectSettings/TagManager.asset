@@ -54,3 +54,6 @@ TagManager:
   - name: Collider Debug
     uniqueID: 3310053101
     locked: 0
+  - name: MinorShadows
+    uniqueID: 3042775309
+    locked: 0
