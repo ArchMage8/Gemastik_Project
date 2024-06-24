@@ -10,8 +10,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: -3729406108031998016}
-    m_Position: {x: 533.27527, y: 10.040649, z: 0}
+    m_State: {fileID: -327373760473655781}
+    m_Position: {x: 465.96982, y: 81.75958, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -21,8 +21,8 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -3729406108031998016}
---- !u!1102 &-3729406108031998016
+  m_DefaultState: {fileID: -327373760473655781}
+--- !u!1102 &-327373760473655781
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -42,7 +42,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: d56fdab51bd143d488c567ef7df807e2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 3fc9a84f339173f46ba8c5e32d76bb76, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -54,7 +54,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: E_Beach
+  m_Name: WI_Brach
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

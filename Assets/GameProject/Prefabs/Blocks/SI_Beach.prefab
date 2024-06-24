@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 20827827584842044}
   - component: {fileID: 20827827584842045}
   m_Layer: 0
-  m_Name: S_Beach
+  m_Name: SI_Beach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e880c0632fdb116448d6e0f1828d2cd1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a67b416f1819394bafc65ab38990c7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 20827827584842046}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 833a026016ebdd94aa35a0ba6c24f2f6, type: 2}
+  m_Controller: {fileID: 9100000, guid: c8d73d6208146644f89505dae4633487, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
