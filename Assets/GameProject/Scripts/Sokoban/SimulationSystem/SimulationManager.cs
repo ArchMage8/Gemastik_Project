@@ -19,6 +19,8 @@ public class SimulationManager : MonoBehaviour
     [Header ("Win/Lose :")] 
     public GameObject fail_indicator;
     public GameObject Win_Canvas;
+    public GameObject Screen_Buttons;
+    public GameObject RestartUI;
 
     [HideInInspector] public bool animationGo = false;
     
@@ -53,6 +55,7 @@ public class SimulationManager : MonoBehaviour
         if (failed == true && completed == false)
         {
             fail_indicator.SetActive(true);
+            StartCoroutine(restartUI());
         }
 
         if(completed == true && failed == false)
@@ -134,6 +137,7 @@ public class SimulationManager : MonoBehaviour
             if (currObject.CompareTag("Finish"))
             {
                 Debug.Log("Scenario 1");
+                Screen_Buttons.SetActive(false);
                 completed = true;
             }
 
@@ -173,5 +177,11 @@ public class SimulationManager : MonoBehaviour
             yield return null;
         } while (isMoving);
         
+    }
+
+    private IEnumerator restartUI()
+    {
+        yield return new WaitForSeconds(1.5f);
+        RestartUI.SetActive(true);
     }
 }
