@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a2db1487e035ce94fbf00fa2726d274d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -399,6 +399,8 @@ MonoBehaviour:
   movementSpeed: 0.5
   fail_indicator: {fileID: 4162574032351474673}
   Win_Canvas: {fileID: 0}
+  Screen_Buttons: {fileID: 0}
+  RestartUI: {fileID: 0}
   animationGo: 0
   currDetector: {fileID: 4162574033305985486}
   nextDetector: {fileID: 4162574033450520654}
