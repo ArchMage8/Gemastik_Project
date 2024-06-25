@@ -22,7 +22,7 @@ public class ObjectGenerator : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(speed);
+       
     }
 
     private IEnumerator ObjectGeneration()
