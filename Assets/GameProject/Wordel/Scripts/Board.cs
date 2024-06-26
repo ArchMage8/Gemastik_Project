@@ -24,6 +24,7 @@ public class Board : MonoBehaviour
     private Row currentRow;
     public string Answer;
     public float checkDelay = 0.5f;
+    public WinHandler winHandler;
 
     [Header("States")]
     public Box.State emptyState;
@@ -45,6 +46,7 @@ public class Board : MonoBehaviour
 
     private void Update()
     {
+
       currentRow = rows[rowIndex];
 
         if (canModify)
@@ -133,7 +135,7 @@ public class Board : MonoBehaviour
 
         if (HasWon(row))
         {
-            enabled = false;
+            CompleteHandler();
         }
 
         if (rowIndex >= rows.Length)
@@ -194,5 +196,11 @@ public class Board : MonoBehaviour
 
         }
         EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    private void CompleteHandler()
+    {
+        winHandler.Complete();
+        enabled = false;
     }
 }
