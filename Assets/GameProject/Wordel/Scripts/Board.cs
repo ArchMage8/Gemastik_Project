@@ -135,12 +135,15 @@ public class Board : MonoBehaviour
 
         if (HasWon(row))
         {
+            
+            
             CompleteHandler();
+            enabled = false;
         }
 
         if (rowIndex >= rows.Length)
         {
-           Debug.Log("Finished");
+           
            enabled = false;
         }
     }
@@ -154,7 +157,7 @@ public class Board : MonoBehaviour
     {
         for(int i = 0; i < row.tiles.Length; i++)
         {
-            if(row.tiles[i].state == correctState)
+            if(row.tiles[i].state != correctState)
             {
                 return false;
             }
@@ -200,6 +203,7 @@ public class Board : MonoBehaviour
 
     private void CompleteHandler()
     {
+        
         winHandler.Complete();
         enabled = false;
     }

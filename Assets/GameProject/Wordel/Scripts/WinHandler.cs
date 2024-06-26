@@ -28,26 +28,26 @@ public class WinHandler : MonoBehaviour
 
     public void Complete()
     {
-        StartCoroutine(BusAnims());
+        BusAnims();
     }
 
-    private IEnumerator BusAnims()
+    private void BusAnims()
     {
+        
         Bus.SetTrigger("BusEntry");
-        yield return new WaitForSeconds(1);
-
-        Bus.SetTrigger("OpenDoors"); //Bus Doors
         
     }
 
     public void OpenStationDoors()
     {
+       
         LeftDoor.SetTrigger("OpenDoor");
         RightDoor.SetTrigger("OpenDoor");
     }
 
     public void MovePeoples()
     {
+        
         Peoples.SetTrigger("MovePeople");
     }
 

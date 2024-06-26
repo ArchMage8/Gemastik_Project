@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7b7d09f517ade45a667946f6cae183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: ligma
+  Answer: Tests
   checkDelay: 0.1
   winHandler: {fileID: 1831147348}
   emptyState:
