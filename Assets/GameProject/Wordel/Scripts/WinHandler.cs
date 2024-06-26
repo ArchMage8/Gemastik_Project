@@ -51,6 +51,11 @@ public class WinHandler : MonoBehaviour
         Peoples.SetTrigger("MovePeople");
     }
 
+    public void LoadNextScene()
+    {
+        StartCoroutine(Toggler());
+    }
+
     private IEnumerator Toggler()
     {
         StartCoroutine(FadeOutMusic());
