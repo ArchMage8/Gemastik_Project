@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7b7d09f517ade45a667946f6cae183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: Taman
+  Answer: Teluk
   checkDelay: 0.1
   winHandler: {fileID: 1831147348}
   emptyState:
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3fccc7aad2526624998c0276a2531282, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2f22691c0cca6b488ceb7176516e1b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -582,7 +582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3fccc7aad2526624998c0276a2531282, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 05c17674906164a4b89fc5b448cf66ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -998,7 +998,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6b8b9c61caec40448fe3c8aa782c626, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ba1f4f4e5b4a5345a78b3e96b752a9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a4534f5bbf7b7fc499784cd114dc1b37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9f6292586c0e13429756170aa880d57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2479,7 +2479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 642299e6748e1e04cbe87f855d3742f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 626ab6249c0b39c489c2fc378d730ac4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
