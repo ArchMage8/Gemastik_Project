@@ -109,8 +109,11 @@ public class Board : MonoBehaviour
             {
                 tile.SetState(incorrectState);
             }
+        }
 
-           
+        for (int i = 0; i < row.tiles.Length; i++)
+        {
+            Box tile = row.tiles[i];
 
             if (tile.state != correctState && tile.state != incorrectState)
             {
@@ -126,9 +129,12 @@ public class Board : MonoBehaviour
                 {
                     tile.SetState(incorrectState);
                 }
+                yield return new WaitForSeconds(0f);
             }
-            yield return new WaitForSeconds(checkDelay);
         }
+       
+    
+
 
         canModify = true;
         canSubmit = true;
@@ -147,6 +153,7 @@ public class Board : MonoBehaviour
            enabled = false;
         }
     }
+
 
     private void FixFormat()
     {

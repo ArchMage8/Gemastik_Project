@@ -174,8 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7b7d09f517ade45a667946f6cae183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: Binus
+  Answer: Order
   checkDelay: 0.1
+  winHandler: {fileID: 0}
   emptyState:
     fillColor: {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
     outlineColor: {r: 0.6862745, g: 0.6627451, b: 0.6627451, a: 1}
