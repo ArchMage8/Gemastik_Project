@@ -2959,7 +2959,7 @@ MonoBehaviour:
   RightDoor: {fileID: 808633570}
   Peoples: {fileID: 1222451626}
   LevelTrigger: {fileID: 5294079255538935452}
-  destinationScene: 0
+  destinationScene: 17
   BGMusic: {fileID: 1699468146}
 --- !u!4 &1831147349
 Transform:
@@ -4224,6 +4224,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HelpSystem (Braille)
       objectReference: {fileID: 0}
+    - target: {fileID: 7852604177997200243, guid: 8b5caa7eecf0e4e41b6e3fb4af4d3ad6,
+        type: 3}
+      propertyPath: BGMusic
+      value: 
+      objectReference: {fileID: 1699468146}
+    - target: {fileID: 7852604177997200243, guid: 8b5caa7eecf0e4e41b6e3fb4af4d3ad6,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 5294079255538935452}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b5caa7eecf0e4e41b6e3fb4af4d3ad6, type: 3}
 --- !u!114 &5383696119017340853

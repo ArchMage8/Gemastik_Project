@@ -42,7 +42,7 @@ public class SimulationManager : MonoBehaviour
     {
         if (isSimulating)
         {
-            Debug.Log("Start Simulation");
+            //Debug.Log("Start Simulation");
             StartCoroutine(Simulation());  
         }
 
@@ -95,7 +95,7 @@ public class SimulationManager : MonoBehaviour
             
             else if(nextObject.CompareTag(currObject.tag) && !nextObject.CompareTag("Rotation"))  //The same block type is next
             {
-                Debug.Log("Scenario 2");
+                //Debug.Log("Scenario 2");
                 StartCoroutine(MoveObjectToPosition(this.transform, nextObject.transform.position, movementSpeed));
             }
 
@@ -105,13 +105,13 @@ public class SimulationManager : MonoBehaviour
 
                 if(currTargetType == nextObject.tag)
                 {
-                    Debug.Log("Scenario 3");
+                    //Debug.Log("Scenario 3");
                     StartCoroutine(MoveObjectToPosition(this.transform, nextObject.transform.position, movementSpeed));
                 }
 
                 else
                 {
-                    Debug.Log("Scenario Fail 1");
+                    //Debug.Log("Scenario Fail 1");
                     failed = true;
                 }
             }
@@ -120,14 +120,14 @@ public class SimulationManager : MonoBehaviour
             {
                 if (nextObject.CompareTag("Rotation"))  //Checking the rotation block
                 {
-                    Debug.Log("Scenario 4");
+                    //Debug.Log("Scenario 4");
                     StartCoroutine(MoveObjectToPosition(this.transform, nextObject.transform.position, movementSpeed));
                     directionFloat = nextObject.GetComponent<DirectionHolder>().direction;
                 }
 
                 else
                 {
-                    Debug.Log("Scenario fail 2");
+                    //Debug.Log("Scenario fail 2");
                     failed = true;
                 }
             }
@@ -136,14 +136,14 @@ public class SimulationManager : MonoBehaviour
         {
             if (currObject.CompareTag("Finish"))
             {
-                Debug.Log("Scenario 1");
+                //Debug.Log("Scenario 1");
                 Screen_Buttons.SetActive(false);
                 completed = true;
             }
 
             else
             {
-                Debug.Log("Scenario fail 3-1");
+               //Debug.Log("Scenario fail 3-1");
                 failed = true;
             }
         }

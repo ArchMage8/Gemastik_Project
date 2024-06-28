@@ -50,7 +50,10 @@ public class ObjectGenerator : MonoBehaviour
 
     private void MoveAndFadeOut(GameObject obj)
     {
-        StartCoroutine(MoveAndFadeOutCoroutine(obj));
+        if(obj != null) 
+        {
+            StartCoroutine(MoveAndFadeOutCoroutine(obj)); 
+        }
     }
 
     private IEnumerator MoveAndFadeOutCoroutine(GameObject obj)
