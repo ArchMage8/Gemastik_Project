@@ -47,7 +47,7 @@ public class WinHandler : MonoBehaviour
 
     public void MovePeoples()
     {
-        
+        StartCoroutine(FadeOutMusic());
         Peoples.SetTrigger("MovePeople");
     }
 
@@ -58,7 +58,7 @@ public class WinHandler : MonoBehaviour
 
     private IEnumerator Toggler()
     {
-        StartCoroutine(FadeOutMusic());
+        
         LevelTrigger.SetTrigger("Start");
         yield return new WaitForSeconds(1.2f);
 
@@ -74,9 +74,11 @@ public class WinHandler : MonoBehaviour
     {
         float startVolume = BGMusic.volume;
 
+        yield return new WaitForSeconds(1.9f);
+
         for (float t = 0; t < 1.2f; t += Time.deltaTime)
         {
-            BGMusic.volume = Mathf.Lerp(startVolume, 0, t / 1.2f);
+            BGMusic.volume = Mathf.Lerp(startVolume, 0, t / 1f);
             yield return null;
         }
 

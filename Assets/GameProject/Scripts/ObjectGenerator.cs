@@ -59,7 +59,7 @@ public class ObjectGenerator : MonoBehaviour
         {
             FadeIn(obj);
 
-            while (Vector2.Distance(obj.transform.position, destination.transform.position) > 0.1f)
+            while (Vector2.Distance(obj.transform.position, destination.transform.position) > 0.1f && obj != null)
             {
                 RandomizerSpeed();
                 obj.transform.position = Vector2.MoveTowards(obj.transform.position, destination.transform.position, speed * Time.deltaTime);

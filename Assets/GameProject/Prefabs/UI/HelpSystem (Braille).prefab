@@ -288,8 +288,8 @@ MonoBehaviour:
   HelpAnimator: {fileID: 5307608264295949151}
   HelpButton: {fileID: 7594488755887622308}
   CloseButton: {fileID: 7594488754893366452}
-  SubmitButton: {fileID: 0}
-  ResetButton: {fileID: 0}
+  WordleButton: {fileID: 977540771224017433, guid: 4b77ee95998d8974ca56f110c7f310ef,
+    type: 3}
 --- !u!1 &7594488755887622308
 GameObject:
   m_ObjectHideFlags: 0

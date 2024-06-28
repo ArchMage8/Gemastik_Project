@@ -21,8 +21,8 @@ public class HelpBraille : MonoBehaviour
     [SerializeField] GameObject CloseButton;
 
     [Header("Braille Buttons : ")]
-    [SerializeField] GameObject SubmitButton;
-    [SerializeField] GameObject ResetButton;
+    [SerializeField] GameObject WordleButton;
+ 
 
 
     private void Awake()
@@ -52,8 +52,7 @@ public class HelpBraille : MonoBehaviour
         CardAnimator.SetTrigger("MoveDown");
         BoardAnimator.SetTrigger("MoveDown");
 
-        ResetButton.SetActive(false);
-        SubmitButton.SetActive(false);
+        WordleButton.SetActive(false);
 
         yield return new WaitForSeconds(1f);
 
@@ -71,8 +70,8 @@ public class HelpBraille : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        ResetButton.SetActive(true);
-        SubmitButton.SetActive(true);
+        WordleButton.SetActive(true);
+
         Card.SetActive(true);
         Board.SetActive(true);
 
