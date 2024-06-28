@@ -70,7 +70,7 @@ public class ObjectGenerator : MonoBehaviour
                 // Check if the object is 2 units away from the destination
                 if (Vector2.Distance(obj.transform.position, destination.transform.position) < 1f && canFadeOut)
                 {
-                    Debug.Log("Test");
+                  
                     // Start fading out
                     FadeOut(obj);
                     canFadeOut = false;
