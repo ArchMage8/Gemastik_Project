@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Networking.Types;
 using UnityEngine.SceneManagement;
 
@@ -21,17 +22,20 @@ public class TransitionFunctions : MonoBehaviour
 
     private IEnumerator Toggler()
     {
-        StartCoroutine(FadeOutMusic());
+        //StartCoroutine(FadeOutMusic());
         animator.SetTrigger("Start");
         yield return new WaitForSeconds(1.2f);
 
         if (!Reload)
         {
+            EventSystem.current.SetSelectedGameObject(null);
             SceneManager.LoadScene(destinationScene);
+
         }
 
         else if (Reload)
         {
+            EventSystem.current.SetSelectedGameObject(null);
             int temp = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(temp);
         }

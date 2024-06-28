@@ -1706,8 +1706,8 @@ MonoBehaviour:
   RightDoor: {fileID: 808633570}
   Peoples: {fileID: 1222451626}
   LevelTrigger: {fileID: 5294079255538935452}
-  destinationScene: 0
-  BGMusic: {fileID: 0}
+  destinationScene: 25
+  BGMusic: {fileID: 1241139790}
 --- !u!1 &1241139789
 GameObject:
   m_ObjectHideFlags: 0

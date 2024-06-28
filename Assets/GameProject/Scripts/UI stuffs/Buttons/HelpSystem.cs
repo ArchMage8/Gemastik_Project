@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class HelpSystem : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class HelpSystem : MonoBehaviour
 
         HelpButton.SetActive(false);
         CloseButton.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     public void Remove()
@@ -41,11 +43,12 @@ public class HelpSystem : MonoBehaviour
         HelpAnimator.SetTrigger("MoveDown");
         CloseButton.SetActive(false);
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
 
         Time.timeScale = 1.0f;
         HelpPopUp.SetActive(false);
         HelpButton.SetActive(true);
         playerController.enabled = true;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 }

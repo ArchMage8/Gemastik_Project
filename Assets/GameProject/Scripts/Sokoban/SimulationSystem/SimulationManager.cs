@@ -33,7 +33,7 @@ public class SimulationManager : MonoBehaviour
 
     public void Start()
     {
-        
+        RestartUI.SetActive (false);
         fail_indicator.SetActive(false);
         Win_Canvas.SetActive(false);
     }

@@ -81,7 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   directionFloat: 0
   moveSpeed: 1
-  blockMoveSound: {fileID: 0}
+  blockMoveSound: {fileID: 7731109991798706456, guid: d4593b9e8d3d713418380150a7c6bc59,
+    type: 3}
   isMoving: 0
   playerCollide: 0
   inRay: 0

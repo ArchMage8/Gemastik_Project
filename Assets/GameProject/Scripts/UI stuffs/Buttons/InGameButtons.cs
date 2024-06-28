@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class InGameButtons : MonoBehaviour
 {
@@ -27,5 +28,6 @@ public class InGameButtons : MonoBehaviour
         simulationManager.isSimulating = true;
 
         buttonImage.sprite = ActivatedSprite;
+        EventSystem.current.SetSelectedGameObject(null);
     }
 }
