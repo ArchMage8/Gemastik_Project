@@ -39,6 +39,7 @@ public class DialogueManager : MonoBehaviour
     public float delay = 2f; // Time delay before allowing the next dialogue index
     public PlayerController playerController;
     public GameObject NavButtons;
+    public GameObject HelpButtons;
     [SerializeField] private AudioSource buttonPress;
 
 
@@ -59,6 +60,7 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(InitializeDialogues());
         UpdateCharacterPictures();
         NavButtons.SetActive(false);
+        HelpButtons.SetActive(false);
         canSound = true;
 
         refLength = CharacterPictures.Length;
@@ -73,7 +75,6 @@ public class DialogueManager : MonoBehaviour
                 buttonPress.Play();
             }
             StartCoroutine(NextDialogue());
-            Debug.Log(indexValue);
         }
     }
 
@@ -143,6 +144,7 @@ public class DialogueManager : MonoBehaviour
         ManBox.enabled = false;
         ScreenFilter.SetActive(false);
         NavButtons.SetActive(true);
+        HelpButtons.SetActive(true);
         TextHolder.enabled = false;
     }
 

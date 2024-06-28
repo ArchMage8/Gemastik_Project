@@ -252,6 +252,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   destinationScene: 0
   buttonSound: {fileID: 0}
+  BGMusic: {fileID: 0}
   Reload: 1
 --- !u!1 &5501848462572122554
 GameObject:
@@ -402,6 +403,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   destinationScene: 0
   buttonSound: {fileID: 0}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!1 &9026544271815066329
 GameObject:
