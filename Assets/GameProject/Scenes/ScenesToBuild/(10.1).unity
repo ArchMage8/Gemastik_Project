@@ -210,7 +210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3fccc7aad2526624998c0276a2531282, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fe17318cd9b42541b184a80a8dbcde4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7b7d09f517ade45a667946f6cae183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: NUSA
+  Answer: Gulf
   checkDelay: 0.1
   winHandler: {fileID: 1831147348}
   emptyState:
@@ -742,7 +742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c6b8b9c61caec40448fe3c8aa782c626, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0efe5415601794e4a8537dc298e2d709, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2063,7 +2063,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 585, y: 269.5}
-  m_SizeDelta: {x: 23, y: 5}
+  m_SizeDelta: {x: 22, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1695235446
 Animator:
@@ -2105,7 +2105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc539bbab11f883439c5f72efcd83ec6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f35414a30b910624d91dc2d93f4e7ed0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2261,7 +2261,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f2f4afc56b8b75748a57b585e00506b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 626ab6249c0b39c489c2fc378d730ac4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

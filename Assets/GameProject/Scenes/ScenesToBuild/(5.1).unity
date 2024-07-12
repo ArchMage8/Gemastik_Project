@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7b7d09f517ade45a667946f6cae183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Answer: KOTA
+  Answer: City
   checkDelay: 0.1
   winHandler: {fileID: 1831147348}
   emptyState:
@@ -937,7 +937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3ba1f4f4e5b4a5345a78b3e96b752a9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97838466d45fdba48bcdf9b021347bed, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3fccc7aad2526624998c0276a2531282, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89607d043a50a00408ca348c6bdf42bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 96f4eca845fbb2f45b002bdb50753d6f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9343fbc54c657f479084ea52f1d0c5a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2063,7 +2063,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 585, y: 269.5}
-  m_SizeDelta: {x: 23, y: 5}
+  m_SizeDelta: {x: 22, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1695235446
 Animator:
@@ -2105,7 +2105,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0bdb7a2ec5aebb4da184c74fb448add, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d4e39f269790294f8cacee679ea46ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
