@@ -20,7 +20,7 @@ public class SimulationManager : MonoBehaviour
     public GameObject fail_indicator;
     public GameObject Win_Canvas;
     public GameObject Screen_Buttons;
-    public GameObject RestartUI;
+    //public GameObject RestartUI;
 
     [HideInInspector] public bool animationGo = false;
     
@@ -33,7 +33,7 @@ public class SimulationManager : MonoBehaviour
 
     public void Start()
     {
-        RestartUI.SetActive (false);
+        //RestartUI.SetActive (false);
         fail_indicator.SetActive(false);
         Win_Canvas.SetActive(false);
     }
@@ -55,7 +55,7 @@ public class SimulationManager : MonoBehaviour
         if (failed == true && completed == false)
         {
             fail_indicator.SetActive(true);
-            StartCoroutine(restartUI());
+            //StartCoroutine(restartUI());
         }
 
         if(completed == true && failed == false)
@@ -179,9 +179,9 @@ public class SimulationManager : MonoBehaviour
         
     }
 
-    private IEnumerator restartUI()
-    {
-        yield return new WaitForSeconds(1.5f);
-        RestartUI.SetActive(true);
-    }
+    //private IEnumerator restartUI()
+    //{
+      //  yield return new WaitForSeconds(1.5f);
+        //RestartUI.SetActive(true);
+    //}
 }

@@ -149,7 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   destinationScene: 2
-  buttonSound: {fileID: 0}
+  buttonSound: {fileID: 6206762524530466998, guid: f3b0e34a42284ed419f536394a819c1a,
+    type: 3}
   BGMusic: {fileID: 0}
   Reload: 1
 --- !u!1 &4162574031744001643
@@ -776,7 +777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2731971830856173170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1086,7 +1087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  destinationScene: 1
-  buttonSound: {fileID: 0}
+  destinationScene: 6
+  buttonSound: {fileID: 6206762524530466998, guid: f3b0e34a42284ed419f536394a819c1a,
+    type: 3}
   BGMusic: {fileID: 0}
   Reload: 0
