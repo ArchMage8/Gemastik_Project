@@ -13,6 +13,7 @@ public class BlockMovement : MonoBehaviour
     [Header("System: ")]
     public float moveSpeed = 5f;
     [SerializeField] private AudioSource blockMoveSound;
+    [SerializeField] private SimulationManager simulationManager;
 
     private Vector3 targetPosition;
     [HideInInspector] public bool isMoving = false;
@@ -40,6 +41,8 @@ public class BlockMovement : MonoBehaviour
         detectionManager = GetComponentInChildren<DetectionManager>();
         playerDetectManager = GetComponentInChildren<PlayerDetectManager>();
 
+        simulationManager = SimulationManager.Instance;
+
         NW.SetActive(false);
         SW.SetActive(false);
         SE.SetActive(false);
@@ -49,9 +52,10 @@ public class BlockMovement : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(simulationManager.isSimulating);
         Transparency();
 
-        if (Input.GetKeyDown(KeyCode.Space) && playerCollide)
+        if (Input.GetKeyDown(KeyCode.Space) && playerCollide && !simulationManager.isSimulating)
         {
             
             GetDirection();

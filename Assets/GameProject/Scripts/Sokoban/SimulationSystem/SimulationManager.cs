@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class SimulationManager : MonoBehaviour
 {
+    public static SimulationManager Instance;
+
     [Header("System :")]
     public float directionFloat;
     private GameObject currObject;
@@ -29,7 +31,11 @@ public class SimulationManager : MonoBehaviour
     [Header("Detectors :")]
     public CurrDetector currDetector;
     public NextDetector nextDetector;
-    
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void Start()
     {

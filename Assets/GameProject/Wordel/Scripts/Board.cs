@@ -37,6 +37,7 @@ public class Board : MonoBehaviour
     private bool canModify = true;
     private bool canSubmit = true;
     private bool isChecked = false;
+    private bool isDone = false;
 
     private void Awake()
     {
@@ -142,7 +143,7 @@ public class Board : MonoBehaviour
         if (HasWon(row))
         {
             
-            
+            isDone = true;
             CompleteHandler();
             enabled = false;
         }
@@ -174,7 +175,7 @@ public class Board : MonoBehaviour
 
     public void Restart()
     {
-        if (canModify)
+        if (canModify && !isDone)
         {
             enabled = true;
             ClearBoard();

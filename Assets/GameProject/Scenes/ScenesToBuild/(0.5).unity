@@ -130,6 +130,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7532049492117999385, guid: 5a9312bd43d7ddf438eb4d79b2a12494,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8769692156874757466, guid: 5a9312bd43d7ddf438eb4d79b2a12494,
         type: 3}
       propertyPath: DesinationScene
