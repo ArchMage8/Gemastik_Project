@@ -52,7 +52,7 @@ public class BlockMovement : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(simulationManager.isSimulating);
+       // Debug.Log(simulationManager.isSimulating);
         Transparency();
 
         if (Input.GetKeyDown(KeyCode.Space) && playerCollide && !simulationManager.isSimulating)

@@ -137,6 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   destinationScene: 1
+  buttonSound: {fileID: 0}
+  BGMusic: {fileID: 0}
   Reload: 0
 --- !u!1 &457877474167784492
 GameObject:

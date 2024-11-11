@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  destinationScene: 0
+  destinationScene: 6
   buttonSound: {fileID: 2780996163497548514, guid: 2284f27d2d54c2744987bf9e96c26930,
     type: 3}
   BGMusic: {fileID: 0}

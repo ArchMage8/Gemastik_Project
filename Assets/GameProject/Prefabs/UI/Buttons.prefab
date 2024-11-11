@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  destinationScene: 0
+  destinationScene: 6
   buttonSound: {fileID: 0}
   BGMusic: {fileID: 0}
   Reload: 0
